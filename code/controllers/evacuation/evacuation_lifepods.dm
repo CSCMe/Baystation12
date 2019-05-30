@@ -14,6 +14,7 @@
 	)
 
 /datum/evacuation_controller/lifepods/launch_evacuation()
+	state = EVAC_IN_TRANSIT
 	priority_announcement.Announce(replacetext(replacetext(GLOB.using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[GLOB.using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
 
 /datum/evacuation_controller/lifepods/available_evac_options()

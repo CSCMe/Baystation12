@@ -15,7 +15,6 @@
 
 	default_law_type = /datum/ai_laws/corporate
 
-	evac_controller_type = /datum/evacuation_controller/lifepods
 	lobby_icon = 'maps/bearcat/bearcat_lobby.dmi'
 	lobby_screens = list("spess","aesthetic")
 
@@ -25,12 +24,15 @@
 	num_exoplanets = 3
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
-	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, maintaining burn for %ETA%."
+	evac_controller_type = /datum/evacuation_controller/bearcat
+	shuttle_called_message = "Attention all hands: Preparing sleep sequence. Preparations done in: %ETA%." //Start
+	shuttle_leaving_dock =   "Attention all hands: Intitiating sleep sequence in: %ETA%." //End
+	shuttle_recall_message = "Attention all hands: Sleep sequence aborted. Return to normal operating conditions."
 
-	emergency_shuttle_called_message = "Attention all hands: emergency evacuation procedures are now in effect. Escape pods will launch in %ETA%"
+	emergency_shuttle_leaving_dock = "Attention all hands: The life pods have been launched, maintaining burn for %ETA%."
+	emergency_shuttle_called_message = "Attention all hands: Emergency evacuation procedures are now in effect. Life pods will launch in %ETA%"
 	emergency_shuttle_called_sound = sound('sound/AI/torch/abandonship.ogg', volume = 45)
-
-	emergency_shuttle_recall_message = "Attention all hands: emergency evacuation sequence aborted. Return to normal operating conditions."
+	emergency_shuttle_recall_message = "Attention all hands: Emergency evacuation sequence aborted. Return to normal operating conditions."
 
 	starting_money = 5000
 	department_money = 0
