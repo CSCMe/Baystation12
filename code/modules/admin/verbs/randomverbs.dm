@@ -792,11 +792,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if(input("The evacuation will just be cancelled if you call it. Call anyway?") in list("Confirm", "Cancel") != "Confirm")
 			return
 
-	var/choice = input("Is this an emergency evacuation or a crew transfer?") in list("Emergency", "Crew Transfer")
-	evacuation_controller.call_evacuation(usr, (choice == "Emergency"))
+	var/datum/evacuation_option/choice = input("What kind of evacuation?") in evacuation_controller.available_evac_options()
+	if(choice != null)
+		evacuation_controller.handle_evac_option(choice.option_target, usr)
 
-	SSstatistics.add_field_details("admin_verb","CSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	log_and_message_admins("admin-called an evacuation.")
+		SSstatistics.add_field_details("admin_verb","CSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+		log_and_message_admins("admin-called an evacuation.")
 	return
 
 /client/proc/admin_cancel_shuttle()
