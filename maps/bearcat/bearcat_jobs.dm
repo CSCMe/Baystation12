@@ -55,7 +55,7 @@
 
 /datum/job/doctor
 	title = "Doc"
-	supervisors = "the Captain and your idea of Hippocratic Oath"
+	supervisors = "the Captain and your idea of the Hippocratic Oath"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/doc
 	alt_titles = list(
 		"Surgeon")
