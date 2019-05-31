@@ -22,6 +22,7 @@
 	default_spawn = "Cryogenic Storage"
 	use_overmap = 1
 	num_exoplanets = 3
+	away_site_budget = 3
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
 	evac_controller_type = /datum/evacuation_controller/bearcat
