@@ -115,15 +115,15 @@
 		log_and_message_admins("[key_name(user)] has cancelled the sleep sequence.")
 
 /datum/evacuation_option/call_carrier
-	option_text = "Call a bluespace carrier"
-	option_desc = "Call a bluespace carrier"
+	option_text = "Call the bluespace carrier"
+	option_desc = "Call the bluespace carrier"
 	option_target = EVAC_OPT_CALL_CARRIER
 	option_cancel = EVAC_OPT_CANCEL_CALL_CARRIER
 	needs_syscontrol = TRUE
 	silicon_allowed = TRUE
-	called_message = "Attention all hands: Preparing to call a bluespace carrier. Preparations done in: %ETA%"
-	docked_message = "Attention all hands: A bluespace carrier has recieved our call."
-	leaving_message = "Attention all hands: Bluespace carrier arriving in: %ETA%."
+	called_message = "Attention all hands: FTC Vector bluespace drive spooling up. Time to jump: %ETA%"
+	docked_message = "Attention all hands: FTU carrier Vector entering bluespace."
+	leaving_message = "Attention all hands: Bluespace carrier on intercept course, clamping in: %ETA%."
 	recall_message = "Attention all hands: Carrier call canceled. Return to normal operating conditions."
 
 /datum/evacuation_option/call_carrier/execute(mob/user)

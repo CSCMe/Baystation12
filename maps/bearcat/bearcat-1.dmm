@@ -121,6 +121,7 @@
 "cq" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall,/area/ship/scrap/crew/dorms2)
 "cr" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/ship/scrap/broken2)
 "cs" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/item/device/radio/intercom{dir = 8; pixel_x = 22},/obj/effect/decal/cleanable/dirt,/obj/structure/cable{icon_state = "2-8"},/turf/simulated/floor/plating,/area/ship/scrap/maintenance/storage)
+"ct" = (/obj/machinery/robotic_fabricator,/turf/simulated/floor/plating,/area/ship/scrap/broken1)
 "cu" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/ship/scrap/broken2)
 "cx" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/steel_grid,/area/ship/scrap/cargo/lower)
 "cy" = (/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/lift)
@@ -234,7 +235,6 @@
 "lK" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/steel_grid,/area/ship/scrap/cargo/lower)
 "mb" = (/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/cargo/lower)
 "nb" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/effect/floor_decal/industrial/loading{icon_state = "loadingarea"; dir = 1},/obj/machinery/firealarm{dir = 1; pixel_y = -24},/turf/simulated/floor/tiled/techfloor/grid,/area/ship/scrap/escape_star)
-"pb" = (/obj/machinery/mecha_part_fabricator,/turf/simulated/floor/plating,/area/ship/scrap/broken1)
 "pr" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall/hull,/area/ship/scrap/cargo/lower)
 "qb" = (/obj/machinery/light/small/red{icon_state = "bulb1"; dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/effect/floor_decal/industrial/loading{icon_state = "loadingarea"; dir = 1},/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/item/device/radio/intercom{dir = 1; pixel_y = -22},/turf/simulated/floor/tiled/techfloor/grid,/area/ship/scrap/escape_star)
 "ql" = (/obj/structure/handrai{tag = "icon-handrail (NORTH)"; icon_state = "handrail"; dir = 1},/turf/space,/area/space)
@@ -345,7 +345,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaDcoaNcScSMbaocUcVcWcW
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaIaLbebFdddeaodfmbdhaodidjaodkdldmNbdowIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadpaLaQaWbRkbAbdtlKdvlKlKdwAbcCPbdydzdAdBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabXaaaaaaaaaaaaaaXFWZcgdDdEcSbIaoQbaoaoaoaoRbaodHdIdJSbdLBOrPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiWpbTbdOcSdPUbdRdSdTdUdVdWVbdYBOBOBOBOBOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiWctTbdOcSdPUbdRdSdTdUdVdWVbdYBOBOBOBOBOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaWZWZcScScSdZeaeaebebWbedededeeuhrPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaXFseXbYbrbdZZbbkdcbZcseeacafequhuhereraaaaaaaaaaaaaabXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaarvseeseteuecewbseybAeAgceCeDeEeFeGeHeIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
