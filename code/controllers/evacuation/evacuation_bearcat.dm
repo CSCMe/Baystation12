@@ -122,7 +122,7 @@
 	needs_syscontrol = TRUE
 	silicon_allowed = TRUE
 	called_message = "Attention all hands: FTC Vector bluespace drive spooling up. Time to jump: %ETA%"
-	docked_message = "Attention all hands: FTU carrier Vector entering bluespace."
+	docked_message = "Attention all hands: FTC Vector entering bluespace."
 	leaving_message = "Attention all hands: Bluespace carrier on intercept course, clamping in: %ETA%."
 	recall_message = "Attention all hands: Carrier call canceled. Return to normal operating conditions."
 
