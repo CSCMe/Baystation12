@@ -55,7 +55,10 @@ var/global/list/narsie_list = list()
 
 		spawn(10 SECONDS)
 			if(evacuation_controller)
-				evacuation_controller.call_evacuation(null, TRUE, 1)
+				for (var/datum/evacuation_option/EO in evacuation_controller.available_evac_options())
+					if(EO.abandon_ship)
+						evacuation_controller.handle_evac_option(EO.option_target, null)
+						return
 				evacuation_controller.evac_no_return = 0 // Cannot recall
 
 /obj/singularity/narsie/Process()
