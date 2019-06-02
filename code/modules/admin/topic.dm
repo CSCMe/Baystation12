@@ -199,8 +199,11 @@
 
 		switch(href_list["call_shuttle"])
 			if("1")
-				if (evacuation_controller.call_evacuation(usr, TRUE))
-					log_and_message_admins("called an evacuation.")
+				for (var/datum/evacuation_option/EO in evacuation_controller.available_evac_options())
+					if(EO.abandon_ship)
+						evacuation_controller.handle_evac_option(EO.option_target, null)
+						return
+				log_and_message_admins("called an evacuation.")
 			if("2")
 				if (evacuation_controller.cancel_evacuation())
 					log_and_message_admins("cancelled an evacuation.")

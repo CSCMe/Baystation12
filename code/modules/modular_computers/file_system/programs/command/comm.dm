@@ -372,7 +372,10 @@ var/last_message_id = 0
 	if (!evacuation_controller)
 		return
 
-	. = evacuation_controller.call_evacuation(null, _emergency_evac = FALSE, autotransfer = TRUE)
+	for (var/datum/evacuation_option/EO in evacuation_controller.available_evac_options())
+		if(!EO.abandon_ship && !EO.hide_option)
+			. = evacuation_controller.handle_evac_option(EO.option_target, null)
+			return
 	if(.)
 		//delay events in case of an autotransfer
 		var/delay = evacuation_controller.evac_arrival_time - world.time + (2 MINUTES)
