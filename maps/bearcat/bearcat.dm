@@ -14,7 +14,6 @@
 	#include "bearcat-1.dmm"
 	#include "bearcat-2.dmm"
 
-	#include "../away/empty.dmm"
 	#include "../away/derelict/derelict.dm"
 	#include "../away/lost_supply_base/lost_supply_base.dm"
 	#include "../away/smugglers/smugglers.dm"
