@@ -7,6 +7,11 @@
 /datum/job/captain
 	supervisors = "the Merchant Code and your conscience"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/captain
+	skill_points = 30
+	software_on_spawn = list(/datum/computer_file/program/comm,
+							 /datum/computer_file/program/card_mod,
+							 /datum/computer_file/program/camera_monitor)
+	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -52,22 +57,48 @@
 	supervisors = "the Captain"
 	department_flag = ENG
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/chief_engineer
+	skill_points = 27
+	software_on_spawn = list(/datum/computer_file/program/comm,
+							 /datum/computer_file/program/ntnetmonitor,
+							 /datum/computer_file/program/power_monitor,
+							 /datum/computer_file/program/supermatter_monitor,
+							 /datum/computer_file/program/alarm_monitor,
+							 /datum/computer_file/program/atmos_control,
+							 /datum/computer_file/program/rcon_console,
+							 /datum/computer_file/program/camera_monitor,
+							 /datum/computer_file/program/shields_monitor)
+	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
+	                    SKILL_ELECTRICAL   = SKILL_MAX,
+	                    SKILL_ATMOS        = SKILL_MAX,
+	                    SKILL_ENGINES      = SKILL_MAX)
 
 /datum/job/doctor
 	title = "Doc"
 	supervisors = "the Captain and your idea of the Hippocratic Oath"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/doc
+	skill_points = 25
 	alt_titles = list(
 		"Surgeon")
 	total_positions = 1
 	spawn_positions = 1
 	hud_icon = "hudmedicaldoctor"
+	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
+							 /datum/computer_file/program/camera_monitor)
+	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
+	                    SKILL_ANATOMY     = SKILL_MAX,
+	                    SKILL_CHEMISTRY   = SKILL_MAX,
+	                    SKILL_VIROLOGY    = SKILL_MAX)
 
 /datum/job/hop
 	title = "First Mate"
 	supervisors = "the Captain and the Merchant Code"
+	skill_points = 27
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/mate
 	hud_icon = "hudheadofpersonnel"
+	software_on_spawn = list(/datum/computer_file/program/comm,
+							 /datum/computer_file/program/card_mod,
+							 /datum/computer_file/program/camera_monitor)
+	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 
 /datum/job/assistant
 	title = "Deck Hand"
@@ -81,10 +112,24 @@
 
 /datum/job/engineer
 	title = "Junior Engineer"
+	skill_points = 25
 	supervisors = "Chief Engineer"
 	total_positions = 2
 	spawn_positions = 2
 	hud_icon = "hudengineer"
+	software_on_spawn = list(/datum/computer_file/program/comm,
+							 /datum/computer_file/program/ntnetmonitor,
+							 /datum/computer_file/program/power_monitor,
+							 /datum/computer_file/program/supermatter_monitor,
+							 /datum/computer_file/program/alarm_monitor,
+							 /datum/computer_file/program/atmos_control,
+							 /datum/computer_file/program/rcon_console,
+							 /datum/computer_file/program/camera_monitor,
+							 /datum/computer_file/program/shields_monitor)
+	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
+	                    SKILL_ELECTRICAL   = SKILL_MAX,
+	                    SKILL_ATMOS        = SKILL_MAX,
+	                    SKILL_ENGINES      = SKILL_MAX)
 
 /datum/job/cyborg
 	supervisors = "your laws and the Captain"
