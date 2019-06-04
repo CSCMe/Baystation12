@@ -57,7 +57,7 @@
 	supervisors = "the Captain"
 	department_flag = ENG
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/chief_engineer
-	skill_points = 27
+	skill_points = 30
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/ntnetmonitor,
 							 /datum/computer_file/program/power_monitor,
@@ -117,7 +117,8 @@
 	total_positions = 2
 	spawn_positions = 2
 	hud_icon = "hudengineer"
-	alt_titles = list ()
+	alt_titles = list (
+		"Engineer")
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/ntnetmonitor,
 							 /datum/computer_file/program/power_monitor,
