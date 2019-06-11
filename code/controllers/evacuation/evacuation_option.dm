@@ -6,11 +6,15 @@
 	var/needs_syscontrol = FALSE
 	var/silicon_allowed = TRUE
 	var/abandon_ship = FALSE
+	var/called_sound
+	var/docked_sound
+	var/leaving_sound
+	var/recall_sound
 	var/called_message
 	var/docked_message
 	var/leaving_message
 	var/recall_message
-	var/hide_option
+	var/hide_option = FALSE
 	
 /datum/evacuation_option/proc/execute(var/mob/user)
 	return

@@ -47,6 +47,9 @@
 	leaving_message = "Attention all hands: The life pods have been launched, maintaining burn for %ETA%."
 	called_message = "Attention all hands: Emergency evacuation procedures are now in effect. Life pods will launch in %ETA%"
 	recall_message = "Attention all hands: Emergency evacuation sequence aborted. Return to normal operating conditions."
+	called_sound = 'sound/evac/Evacuation.ogg'
+	leaving_sound = 'sound/evac/Evacuation.ogg'
+	recall_sound = 'sound/evac/lowpower.ogg'
 
 /datum/evacuation_option/abandon_ship/execute(mob/user)
 	if (!evacuation_controller)
@@ -86,6 +89,8 @@
 	called_message = "Attention all hands: Preparing sleep sequence. Preparations done in: %ETA%." //Start
 	leaving_message = "Attention all hands: Intitiating sleep sequence in: %ETA%." //End
 	recall_message = "Attention all hands: Sleep sequence aborted. Return to normal operating conditions."
+	called_sound = 'sound/evac/short-time.ogg'
+	recall_sound = 'sound/evac/lowpower.ogg'
 	hide_option = TRUE
 
 /datum/evacuation_option/sleep_sequence/execute(mob/user)
@@ -125,6 +130,9 @@
 	docked_message = "Attention all hands: FTC Vector entering bluespace."
 	leaving_message = "Attention all hands: Bluespace carrier on intercept course, clamping in: %ETA%."
 	recall_message = "Attention all hands: Carrier call canceled. Return to normal operating conditions."
+	called_sound = 'sound/evac/ab_AirHorn.ogg'
+	leaving_sound = 'sound/evac/3ab_AirHorn.ogg'
+	recall_sound = 'sound/evac/lowpower.ogg'
 
 /datum/evacuation_option/call_carrier/execute(mob/user)
 	if (!evacuation_controller)
