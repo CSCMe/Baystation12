@@ -474,7 +474,7 @@
 	dir = 4;
 	name = "Captain's Quarters APC"
 	},
-/obj/item/weapon/reagent_containers/food/drinks/coffeecup/one,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/one,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
