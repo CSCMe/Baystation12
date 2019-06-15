@@ -3026,9 +3026,7 @@
 /turf/simulated/wall,
 /area/ship/scrap/broken1)
 "Xb" = (
-/obj/item/weapon/circuitboard/pacman,
-/obj/item/weapon/circuitboard/recharge_station,
-/obj/item/weapon/circuitboard/shield_generator,
+/obj/item/weapon/stock_parts/circuitboard/recharge_station,
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
