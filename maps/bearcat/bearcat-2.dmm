@@ -115,6 +115,7 @@
 "ck" = (/obj/structure/window/phoronreinforced,/obj/machinery/atmospherics/binary/pump{dir = 8},/obj/machinery/portable_atmospherics/canister/phoron,/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/aft)
 "cl" = (/obj/machinery/meter,/obj/machinery/atmospherics/pipe/simple/visible/green{dir = 9; icon_state = "intact"},/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/aft)
 "cm" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/canister/air/airlock,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/ship/scrap/dock)
+"cn" = (/obj/machinery/atmospherics/omni/filter{tag_east = 1; tag_north = 3; tag_south = 4; tag_west = 2; use_power = 1},/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "cp" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "cq" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "cs" = (/obj/machinery/atmospherics/pipe/tank/air,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
@@ -507,7 +508,6 @@
 "FD" = (/obj/machinery/door/firedoor,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/ship/scrap/comms)
 "FS" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/turf/simulated/floor/plating,/area/ship/scrap/dock)
 "FV" = (/obj/item/device/radio,/obj/structure/cable{icon_state = "4-9"},/obj/machinery/atmospherics/pipe/simple/hidden/fuel{icon_state = "intact"; dir = 6},/turf/simulated/floor/airless,/area/space)
-"Gb" = (/obj/machinery/atmospherics/omni/filter{tag_east = 1; tag_north = 4; tag_south = 3; tag_west = 2; use_power = 1},/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "Gc" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/pipe/simple/hidden/fuel{icon_state = "intact"; dir = 4},/obj/machinery/door/airlock/hatch/autoname/engineering,/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/starboard)
 "Gv" = (/obj/machinery/door/airlock/hatch,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "GF" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall/hull,/area/ship/scrap/maintenance/atmos)
@@ -650,7 +650,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxGFGFhDAbbMhOhPhQhFaChSbGbI
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFhDhDibicidieifWEaFiibJikililimKOioipiqhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFhDCbisitiuivadhDixiyaHaKiBiCiDhJiEiFbNJIPHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNaaaaaaaaaaaaGFiIiJiKiLiMDbbdhDABiQiQiRiQiQiQhLhdiTbOhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiViWGbiYiZjaqEHbhDjdjejfjgcecicihLjkjljmhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiViWcniYiZjaqEHbhDjdjejfjgcecicihLjkjljmhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxGFiIiJjojpjqjrjshDldjujvjwjxjyjzhLhLjAhLhLBxIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBrxhDIbjDjEjFjGjHhDjIjJjKjLckjNclhLhLjPhLhLBxaaaaaaaaaaaNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBGFhDhDjQjRjSjTjUhDjVjWjXjYjZkakbhLhLkchLhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
