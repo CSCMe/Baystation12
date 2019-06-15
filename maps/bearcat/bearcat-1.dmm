@@ -3026,7 +3026,9 @@
 /turf/simulated/wall,
 /area/ship/scrap/broken1)
 "Xb" = (
+/obj/item/weapon/stock_parts/circuitboard/pacman,
 /obj/item/weapon/stock_parts/circuitboard/recharge_station,
+/obj/item/weapon/stock_parts/circuitboard/shield_generator,
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
@@ -3052,15 +3054,15 @@
 /turf/space,
 /area/space)
 "Yb" = (
-/obj/item/weapon/circuitboard/helm,
-/obj/item/weapon/circuitboard/unary_atmos/cooler,
+/obj/item/weapon/stock_parts/circuitboard/helm,
+/obj/item/weapon/stock_parts/circuitboard/unary_atmos/cooler,
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/weapon/circuitboard/unary_atmos/heater,
+/obj/item/weapon/stock_parts/circuitboard/unary_atmos/heater,
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/scrap/maintenance/techstorage)
 "Zb" = (
