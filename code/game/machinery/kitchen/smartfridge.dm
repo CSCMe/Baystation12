@@ -160,7 +160,7 @@
 		else
 			icon_state = "drying_rack-off"
 	else
-		icon_state = "dring_rack"
+		icon_state = "drying_rack"
 	if(contents.len)
 		icon_state = "drying_rack-plant"
 		if(!inoperable())
@@ -182,7 +182,6 @@
 			return
 
 /obj/machinery/smartfridge/Process()
-	..()
 	if(stat & (BROKEN|NOPOWER))
 		return
 	if(src.seconds_electrified > 0)

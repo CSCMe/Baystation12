@@ -1095,6 +1095,8 @@
 	if(!(species.appearance_flags & HAS_UNDERWEAR))
 		QDEL_NULL_LIST(worn_underwear)
 
+	available_maneuvers = species.maneuvers.Copy()
+
 	spawn(0)
 		regenerate_icons()
 		if(vessel.total_volume < species.blood_volume)
@@ -1119,6 +1121,12 @@
 		else if(!cultural_info[token] || !(cultural_info[token] in species.available_cultural_info[token]))
 			update_lang = TRUE
 			set_cultural_value(token, species.default_cultural_info[token], defer_language_update = TRUE)
+
+	default_walk_intent = null
+	default_run_intent = null
+	move_intent = null
+	move_intents = species.move_intents.Copy()
+	set_next_usable_move_intent()
 
 	if(update_lang)
 		languages.Cut()
