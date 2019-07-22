@@ -5,15 +5,15 @@
 "ab" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/computer_hardware/tesla_link,
-/obj/item/weapon/computer_hardware/processor_unit,
-/obj/item/weapon/computer_hardware/nano_printer,
-/obj/item/weapon/computer_hardware/network_card,
-/obj/item/weapon/computer_hardware/hard_drive/portable,
-/obj/item/weapon/computer_hardware/hard_drive,
-/obj/item/weapon/computer_hardware/card_slot,
-/obj/item/weapon/computer_hardware/battery_module,
-/obj/item/weapon/computer_hardware/ai_slot,
+/obj/item/weapon/stock_parts/computer/tesla_link,
+/obj/item/weapon/stock_parts/computer/processor_unit,
+/obj/item/weapon/stock_parts/computer/nano_printer,
+/obj/item/weapon/stock_parts/computer/network_card,
+/obj/item/weapon/stock_parts/computer/hard_drive/portable,
+/obj/item/weapon/stock_parts/computer/hard_drive,
+/obj/item/weapon/stock_parts/computer/card_slot,
+/obj/item/weapon/stock_parts/computer/battery_module,
+/obj/item/weapon/stock_parts/computer/ai_slot,
 /obj/machinery/camera/network/engine{
 	c_tag = "Tech Storage - Main"
 	},
@@ -217,8 +217,8 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/disposal)
 "at" = (
-/obj/machinery/button/remote/driver{
-	id = "enginecore";
+/obj/machinery/button/mass_driver{
+	id_tag = "enginecore";
 	name = "Emergency Core Eject";
 	pixel_x = 0;
 	pixel_y = -24
@@ -230,21 +230,20 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "emergency core eject"
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for engine core.";
-	id = "EngineVent";
+	id_tag = "EngineVent";
 	name = "Engine Ventillatory Control";
 	pixel_x = -24;
 	pixel_y = 10
 	},
-/obj/machinery/button/remote/airlock{
+/obj/machinery/button/alternate/door/bolts{
 	desc = "A remote control-switch for the engine core airlock hatch bolts.";
-	id = "engine_access_hatch";
+	id_tag = "engine_access_hatch";
 	name = "Engine Hatch Bolt Control";
 	pixel_x = -24;
 	pixel_y = -10;
-	req_access = list("ACCESS_ENGINEERING");
-	specialfunctions = 4
+	req_access = list("ACCESS_ENGINEERING")
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
@@ -275,6 +274,21 @@
 "ax" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/seconddeck/aftstarboard)
+"ay" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup{
+	name = "\improper Fusion Fuel Canister: \[Hydrogen]";
+	start_pressure = 14999
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vacant/prototype/engine)
 "az" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/seconddeck/forestarboard)
@@ -332,7 +346,7 @@
 /obj/machinery/door/blast/regular{
 	density = 1;
 	icon_state = "pdoor1";
-	id = "RubbishOuter";
+	id_tag = "RubbishOuter";
 	name = "Disposal Exit Vent";
 	opacity = 1
 	},
@@ -364,6 +378,9 @@
 /obj/item/weapon/stock_parts/circuitboard/aiupload,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
+"aK" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/vacant/armory)
 "aL" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1379;
@@ -600,7 +617,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id = "prototype_exhaust"
+	id_tag = "prototype_exhaust"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
@@ -716,6 +733,15 @@
 "bs" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/disposal)
+"bt" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/highsecurity{
+	icon_state = "closed";
+	locked = 1;
+	name = "Auxiliary Armory"
+	},
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "bu" = (
 /obj/machinery/disposal/deliveryChute,
 /obj/structure/disposalpipe/trunk{
@@ -788,7 +814,6 @@
 "bB" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/stock_parts/circuitboard/mecha_control,
 /obj/item/weapon/stock_parts/circuitboard/robotics,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
@@ -837,6 +862,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/forestarboard)
+"bH" = (
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "bI" = (
 /turf/simulated/wall/prepainted,
 /area/maintenance/seconddeck/forestarboard)
@@ -993,7 +1021,7 @@
 /obj/machinery/door/blast/regular{
 	density = 1;
 	icon_state = "pdoor1";
-	id = "RubbishInner";
+	id_tag = "RubbishInner";
 	name = "Disposal Exit Vent";
 	opacity = 1
 	},
@@ -1048,6 +1076,10 @@
 /obj/item/weapon/stock_parts/circuitboard/stationalert,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
+"cb" = (
+/obj/item/frame/fire_alarm,
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cc" = (
 /obj/machinery/shieldgen,
 /turf/simulated/floor/tiled/techfloor,
@@ -1150,6 +1182,14 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/central)
+"cl" = (
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cm" = (
 /obj/item/weapon/stool,
 /obj/machinery/alarm{
@@ -1227,6 +1267,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/disposal)
+"cu" = (
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Weapons locker"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/random/ammo,
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cv" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Disposal Belt Access"
@@ -1289,6 +1340,16 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
+"cF" = (
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Weapons locker"
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cG" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/plating,
@@ -1325,6 +1386,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/forestarboard)
+"cK" = (
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/random/maintenance/solgov,
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Weapons locker"
+	},
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cL" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1339,6 +1411,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/forestarboard)
+"cM" = (
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Weapons locker"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/random/ammo,
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "cN" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -3736,26 +3822,26 @@
 	pixel_x = 8;
 	pixel_y = 36
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "cChamber1pV";
+/obj/machinery/button/blast_door{
+	id_tag = "cChamber1pV";
 	name = "Deck One Port Chamber Vent";
 	pixel_x = 36;
 	pixel_y = 6
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "cChamber3pV";
+/obj/machinery/button/blast_door{
+	id_tag = "cChamber3pV";
 	name = "Deck Three Port Chamber Vent";
 	pixel_x = 36;
 	pixel_y = -6
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "cChamber3sV";
+/obj/machinery/button/blast_door{
+	id_tag = "cChamber3sV";
 	name = "Deck Three Starboard Chamber Vent";
 	pixel_x = 24;
 	pixel_y = -6
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "cChamber1sV";
+/obj/machinery/button/blast_door{
+	id_tag = "cChamber1sV";
 	name = "Deck One Starboard Chamber Vent";
 	pixel_x = 24;
 	pixel_y = 6
@@ -4017,6 +4103,7 @@
 	icon_state = "chair_preview";
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engineering_monitoring)
 "iF" = (
@@ -4044,7 +4131,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -4306,9 +4393,9 @@
 /area/engineering/engine_room)
 "jg" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
-	id = "EngineRadiatorViewport";
+	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Viewport Shutters";
 	pixel_x = 25;
 	pixel_y = 0
@@ -4501,13 +4588,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_room)
 "jI" = (
-/obj/machinery/button/remote/airlock{
-	id = "engine_electrical_maintenance";
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "engine_electrical_maintenance";
 	name = "Door Bolt Control";
 	pixel_x = -24;
 	pixel_y = -24;
-	req_access = list("ACCESS_ENGINEERING");
-	specialfunctions = 4
+	req_access = list("ACCESS_ENGINEERING")
 	},
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -5800,21 +5886,18 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/locker_room)
 "mF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4;
 	icon_state = "intact"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engineering_monitoring)
 "mG" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
 	dir = 8
@@ -5961,7 +6044,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -6270,7 +6353,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "EngineBlast";
+	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
 	},
@@ -6538,7 +6621,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -6923,7 +7006,7 @@
 "pu" = (
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "engstorage";
+	id_tag = "engstorage";
 	name = "Engineering Storage Shutters"
 	},
 /obj/structure/cable/green{
@@ -6994,8 +7077,8 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "engstorage";
+/obj/machinery/button/blast_door{
+	id_tag = "engstorage";
 	name = "Desk Shutter Control";
 	pixel_y = 24
 	},
@@ -7194,23 +7277,23 @@
 /area/engineering/engine_monitoring)
 "pS" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine control room blast doors.";
-	id = "EngineBlast";
+	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	pixel_x = 0;
 	pixel_y = -3
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine charging port.";
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Doors";
 	pixel_x = -6;
 	pixel_y = 7
 	},
-/obj/machinery/button/remote/emitter{
-	desc = "A remote control-switch for the engine emitter.";
-	id = "EngineEmitter";
+/obj/machinery/button/alternate{
+	desc = "A remote control-switch which toggles the engine emitter.";
+	id_tag = "EngineEmitter";
 	name = "Engine Emitter";
 	pixel_x = 6;
 	pixel_y = 7;
@@ -7257,7 +7340,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "EngineBlast";
+	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
 	},
@@ -7330,7 +7413,7 @@
 /obj/machinery/power/emitter{
 	anchored = 1;
 	dir = 4;
-	id = "EngineEmitter";
+	id_tag = "EngineEmitter";
 	state = 2
 	},
 /obj/structure/cable/cyan{
@@ -7365,7 +7448,7 @@
 /area/engineering/engine_room)
 "qc" = (
 /obj/machinery/door/blast/regular{
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
@@ -7601,9 +7684,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -7957,7 +8037,7 @@
 /area/engineering/engine_room)
 "rf" = (
 /obj/machinery/door/blast/regular{
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
@@ -7968,7 +8048,7 @@
 /area/engineering/engine_room)
 "rg" = (
 /obj/machinery/door/blast/regular{
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
@@ -8090,7 +8170,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -8902,7 +8982,7 @@
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/engineering/atmos)
 "tW" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/robotics_fabricator,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -9267,7 +9347,7 @@
 /obj/machinery/door/blast/regular/open{
 	begins_closed = 1;
 	dir = 4;
-	id = "WasteGate";
+	id_tag = "WasteGate";
 	name = "Waste Gate"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -9533,9 +9613,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/escape_pod10/station)
-"vy" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/vacant/armory)
 "vz" = (
 /obj/structure/ladder,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -10037,9 +10114,9 @@
 /area/engineering/engine_room)
 "xb" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
-	id = "EngineRadiatorViewport";
+	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Viewport Shutters";
 	pixel_x = 25;
 	pixel_y = 0
@@ -10094,34 +10171,6 @@
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/foreport)
-"xj" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/highsecurity{
-	icon_state = "closed";
-	locked = 1;
-	name = "Auxiliary Armory"
-	},
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"xk" = (
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"xl" = (
-/obj/item/ammo_magazine/pistol/small/empty,
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"xm" = (
-/obj/item/frame/fire_alarm,
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"xn" = (
-/obj/machinery/alarm{
-	dir = 8;
-	icon_state = "alarm0";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/vacant/armory)
 "xp" = (
 /obj/random/junk,
 /obj/structure/cable{
@@ -10163,7 +10212,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "prototype_chamber_blast"
+	id_tag = "prototype_chamber_blast"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
@@ -10326,52 +10375,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
-"yb" = (
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Weapons locker"
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/random/ammo,
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"yc" = (
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Weapons locker"
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"yd" = (
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/random/maintenance/solgov,
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Weapons locker"
-	},
-/turf/simulated/floor/plating,
-/area/vacant/armory)
-"ye" = (
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Weapons locker"
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/random/ammo,
-/turf/simulated/floor/plating,
-/area/vacant/armory)
 "yf" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/incinerator)
@@ -11373,7 +11376,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/button/ignition{
-	id = "Incinerator";
+	id_tag = "Incinerator";
 	pixel_x = 6;
 	pixel_y = -24
 	},
@@ -11391,8 +11394,8 @@
 /area/maintenance/incinerator)
 "AA" = (
 /obj/machinery/meter,
-/obj/machinery/button/remote/blast_door{
-	id = "disvent";
+/obj/machinery/button/blast_door{
+	id_tag = "disvent";
 	name = "Incinerator Vent Control";
 	pixel_x = 0;
 	pixel_y = -24
@@ -12305,7 +12308,7 @@
 	use_power = 1
 	},
 /obj/machinery/sparker{
-	id = "Incinerator";
+	id_tag = "Incinerator";
 	pixel_x = -20
 	},
 /turf/simulated/floor/reinforced,
@@ -12523,7 +12526,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/incinerator)
 "Dq" = (
-/obj/structure/computerframe,
+/obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
 "Dr" = (
@@ -12626,9 +12629,9 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A control switch to open and close the waste gate.";
-	id = "WasteGate";
+	id_tag = "WasteGate";
 	name = "Waste Gate Control";
 	pixel_x = 0;
 	pixel_y = 25
@@ -12892,7 +12895,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 1;
 	icon_state = "pdoor0";
-	id = "prototype_chamber_blast"
+	id_tag = "prototype_chamber_blast"
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor/reinforced/airless,
@@ -12905,7 +12908,7 @@
 "El" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
@@ -13763,7 +13766,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
+/obj/machinery/portable_atmospherics/canister/helium{
+	name = "\improper Fusion Fuel Canister \[He]";
+	start_pressure = 14999
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vacant/prototype/engine)
 "Gk" = (
@@ -13859,7 +13865,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -14061,8 +14067,8 @@
 	pixel_x = -24;
 	pixel_y = 0
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "engineeringdeskshutters";
+/obj/machinery/button/blast_door{
+	id_tag = "engineeringdeskshutters";
 	name = "Desk Shutter Control";
 	pixel_y = 24
 	},
@@ -14453,15 +14459,14 @@
 "It" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/button/toggle/valve{
-	frequency = 1447;
-	id = "fuelmode";
+	id_tag = "fuelmode";
 	name = "fuel mode control";
 	operating = 0;
 	pixel_x = 24;
 	pixel_y = 4
 	},
 /obj/machinery/button/ignition{
-	id = "engines";
+	id_tag = "engines";
 	operating = 1;
 	pixel_x = 24;
 	pixel_y = -4
@@ -14674,7 +14679,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "engineeringdeskshutters";
+	id_tag = "engineeringdeskshutters";
 	name = "Engineering Desk Shutters";
 	opacity = 0
 	},
@@ -14799,7 +14804,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "EngineBlast";
+	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
 	},
@@ -14957,8 +14962,8 @@
 	icon_state = "warningcorner";
 	dir = 8
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "engstorage";
+/obj/machinery/button/blast_door{
+	id_tag = "engstorage";
 	name = "Desk Shutter Control";
 	pixel_y = -24
 	},
@@ -15110,7 +15115,7 @@
 /area/engineering/engine_room)
 "Le" = (
 /obj/machinery/door/blast/regular{
-	id = "SupermatterPort";
+	id_tag = "SupermatterPort";
 	name = "Reactor Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
@@ -15396,23 +15401,23 @@
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
 "Mi" = (
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the prototype exhaust";
-	id = "prototype_exhaust";
+	id_tag = "prototype_exhaust";
 	name = "Chamber Exhaust";
 	pixel_x = -11;
 	pixel_y = 29
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine containment doors";
-	id = "prototype_chamber_blast";
+	id_tag = "prototype_chamber_blast";
 	name = "Chamber Containment";
 	pixel_x = 0;
 	pixel_y = 29
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the observation shutters";
-	id = "fusion_observation";
+	id_tag = "fusion_observation";
 	name = "Chamber Observation";
 	pixel_x = 11;
 	pixel_y = 29
@@ -16075,7 +16080,7 @@
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id = "fusion_observation"
+	id_tag = "fusion_observation"
 	},
 /turf/simulated/floor/plating,
 /area/vacant/prototype/control)
@@ -16403,7 +16408,7 @@
 "Pk" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	id = "EngineRadiatorViewport";
+	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Shutters"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -16703,6 +16708,9 @@
 	c_tag = "Engine - Prototype Chamber Two";
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup{
+	name = "\improper Fusion Fuel Canister \[Phoron]"
+	},
 /turf/simulated/floor/plating,
 /area/vacant/prototype/engine)
 "Qj" = (
@@ -16995,7 +17003,7 @@
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id = "fusion_observation"
+	id_tag = "fusion_observation"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -17274,6 +17282,10 @@
 	dir = 1;
 	pixel_y = -28
 	},
+/obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup{
+	name = "\improper Fusion Fuel Canister: \[Hydrogen]";
+	start_pressure = 14999
+	},
 /turf/simulated/floor/plating,
 /area/vacant/prototype/engine)
 "Sj" = (
@@ -17519,17 +17531,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/vacant/prototype/engine)
-"Ti" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vacant/prototype/engine)
 "Tj" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	icon_state = "warningcorner";
@@ -17548,7 +17549,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "prototype_chamber_blast"
+	id_tag = "prototype_chamber_blast"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
@@ -17643,7 +17644,7 @@
 "Ty" = (
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "engstorage";
+	id_tag = "engstorage";
 	name = "Engineering Storage Shutters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
@@ -17859,7 +17860,7 @@
 "Uo" = (
 /obj/machinery/mass_driver{
 	dir = 4;
-	id = "enginecore"
+	id_tag = "enginecore"
 	},
 /obj/machinery/power/supermatter,
 /obj/effect/engine_setup/core,
@@ -18070,7 +18071,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup,
+/obj/machinery/portable_atmospherics/canister/helium{
+	name = "\improper Fusion Fuel Canister \[He]";
+	start_pressure = 14999
+	},
 /turf/simulated/floor/plating,
 /area/vacant/prototype/engine)
 "Vj" = (
@@ -18090,7 +18094,7 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	id = "EngineRadiatorViewport";
+	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Shutters"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -18356,7 +18360,7 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	icon_state = "pdoor1";
-	id = "EngineVent";
+	id_tag = "EngineVent";
 	name = "Reactor Vent";
 	p_open = 0
 	},
@@ -18487,7 +18491,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "WQ" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/robotics_fabricator,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/robotics/lower)
@@ -18613,7 +18617,7 @@
 "Xk" = (
 /obj/machinery/door/blast/regular{
 	dir = 1;
-	id = "disvent";
+	id_tag = "disvent";
 	name = "Incinerator Vent"
 	},
 /obj/machinery/shield_diffuser,
@@ -18766,15 +18770,6 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck)
-"XQ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall/prepainted,
-/area/engineering/atmos)
 "XR" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/assembly/robotics/lower)
@@ -18797,16 +18792,16 @@
 /turf/simulated/floor/plating,
 /area/engineering/engineering_monitoring)
 "XV" = (
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote-control switch.";
-	id = "RubbishInner";
+	id_tag = "RubbishInner";
 	name = "Rubbish Ejection";
 	pixel_x = -24;
 	pixel_y = -10
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote-control switch.";
-	id = "RubbishOuter";
+	id_tag = "RubbishOuter";
 	name = "Rubbish Venting Control";
 	pixel_x = -24;
 	pixel_y = 10
@@ -19096,11 +19091,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "YX" = (
-/obj/machinery/button/remote/airlock{
-	id = "engsafedoor";
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "engsafedoor";
 	name = "safe room door-control";
-	pixel_y = -32;
-	specialfunctions = 4
+	pixel_y = -32
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -19298,6 +19292,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/engine_room)
+"Zp" = (
+/obj/item/ammo_magazine/pistol/small/empty,
+/turf/simulated/floor/plating,
+/area/vacant/armory)
 "Zq" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -29997,7 +29995,7 @@ Ng
 Vi
 Gj
 Nj
-Ti
+ay
 mb
 ub
 Wp
@@ -31820,10 +31818,10 @@ kP
 ZV
 ZV
 dX
-vy
-xj
-vy
-vy
+aK
+bt
+aK
+aK
 pi
 pi
 Wp
@@ -32022,10 +32020,10 @@ wE
 wE
 wE
 dX
-vy
-xk
-yb
-vy
+aK
+bH
+cu
+aK
 zA
 pi
 Be
@@ -32224,10 +32222,10 @@ iW
 jB
 wE
 dX
-vy
-xl
-yc
-vy
+aK
+Zp
+cF
+aK
 nc
 pi
 Bf
@@ -32426,10 +32424,10 @@ KN
 jC
 wE
 dX
-vy
-xm
-yd
-vy
+aK
+cb
+cK
+aK
 zB
 pi
 pi
@@ -32628,10 +32626,10 @@ Fu
 jD
 dd
 dX
-vy
-xn
-ye
-vy
+aK
+cl
+cM
+aK
 zC
 Bg
 pi
@@ -32830,8 +32828,8 @@ ju
 jE
 wE
 dX
-vy
-vy
+aK
+aK
 yf
 yf
 yg
@@ -42533,7 +42531,7 @@ ES
 DI
 Za
 BE
-XQ
+Qu
 Er
 Fp
 Fs

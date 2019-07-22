@@ -779,7 +779,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/decal/mecha_wreckage/ripley,
+/obj/structure/mech_wreckage/powerloader,
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "cl" = (
@@ -1122,10 +1122,10 @@
 "df" = (
 /obj/item/stack/material/rods,
 /obj/item/weapon/reagent_containers/food/snacks/bearmeat,
-/obj/item/weapon/reagent_containers/food/snacks/caviar,
-/obj/item/weapon/reagent_containers/food/snacks/caviar,
-/obj/item/weapon/reagent_containers/food/snacks/caviar,
-/obj/item/weapon/reagent_containers/food/snacks/caviar,
+/obj/item/weapon/reagent_containers/food/snacks/canned/caviar,
+/obj/item/weapon/reagent_containers/food/snacks/canned/caviar,
+/obj/item/weapon/reagent_containers/food/snacks/canned/caviar,
+/obj/item/weapon/reagent_containers/food/snacks/canned/caviar,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg4"
 	},
@@ -1577,11 +1577,15 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "eq" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/engivend{
+	req_access = list()
+	},
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "er" = (
-/obj/machinery/vending/engineering,
+/obj/machinery/vending/engineering{
+	req_access = list()
+	},
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "es" = (
@@ -2177,7 +2181,7 @@
 	dir = 4
 	},
 /obj/machinery/button/ignition{
-	id = "voxship";
+	id_tag = "voxship";
 	pixel_x = -28
 	},
 /turf/simulated/floor/plating/vox,
@@ -2197,7 +2201,7 @@
 	use_power = 1
 	},
 /obj/machinery/sparker{
-	id = "voxship";
+	id_tag = "voxship";
 	pixel_x = -20
 	},
 /turf/simulated/floor/airless,

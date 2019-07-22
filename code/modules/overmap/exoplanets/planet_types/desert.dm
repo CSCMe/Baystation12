@@ -155,12 +155,12 @@
 	else
 		..()
 
-/obj/structure/quicksand/Crossed(AM)
+/obj/structure/quicksand/Crossed(var/atom/movable/AM)
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if (L.can_overcome_gravity())
+		if(L.throwing || L.can_overcome_gravity())
 			return
 		buckle_mob(L)
 		if(!exposed)
 			expose()
-		to_chat(L, "<span class='danger'>You fall into \the [src]!</span>")
+		to_chat(L, SPAN_DANGER("You fall into \the [src]!"))

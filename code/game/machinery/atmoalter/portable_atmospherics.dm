@@ -131,7 +131,7 @@
 					return
 			else
 				to_chat(user, "<span class='notice'>Nothing happens.</span>")
-				return
+				return ..()
 
 	else if (istype(W, /obj/item/device/scanner/gas))
 		return
@@ -142,10 +142,8 @@
 	return air_contents
 
 /obj/machinery/portable_atmospherics/powered
-	uncreated_component_parts = list(
-		/obj/item/weapon/stock_parts/power/battery,
-		/obj/item/weapon/stock_parts/power/apc
-	)
+	uncreated_component_parts = null
+	stat_immune = 0
 	use_power = POWER_USE_IDLE
 	var/power_rating
 	var/power_losses

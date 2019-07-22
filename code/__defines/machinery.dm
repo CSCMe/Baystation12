@@ -10,7 +10,6 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 
 // Doors!
 #define DOOR_CRUSH_DAMAGE 40
-#define ALIEN_SELECT_AFK_BUFFER  1    // How many minutes that a person can be AFK before not being allowed to be an alien.
 
 #define POWER_USE_OFF    0
 #define POWER_USE_IDLE   1
@@ -27,9 +26,13 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 // Bitflags for machine stat variable.
 #define BROKEN   0x1
 #define NOPOWER  0x2
-#define POWEROFF 0x4  // TBD.
 #define MAINT    0x8  // Under maintenance.
 #define EMPED    0x10 // Temporary broken by EMP pulse.
+#define NOSCREEN 0x20 // No UI shown via direct interaction
+#define NOINPUT  0x40 // No input taken from direct interaction
+
+#define MACHINE_BROKEN_GENERIC  0x1 // Standard legacy brokenness, used on a case-by-case basis
+#define MACHINE_BROKEN_NO_PARTS 0x2 // Missing required parts
 
 // Used by firelocks
 #define FIREDOOR_OPEN 1

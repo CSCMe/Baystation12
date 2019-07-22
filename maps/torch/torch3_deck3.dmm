@@ -140,7 +140,7 @@
 	icon_state = "corner_white";
 	dir = 1
 	},
-/obj/structure/computerframe,
+/obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/tiled,
 /area/vacant/brig)
 "ay" = (
@@ -442,7 +442,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/forestarboard)
 "bq" = (
-/obj/structure/computerframe,
+/obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/forestarboard)
 "br" = (
@@ -881,7 +881,7 @@
 	icon_state = "bordercolorhalf";
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "ch" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -959,6 +959,39 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
+"cs" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/civilian{
+	name = "Galley"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/crew_quarters/galley)
+"ct" = (
+/obj/machinery/door/airlock/command{
+	autoset_access = 0;
+	name = "Officer's Mess";
+	req_access = newlist()
+	},
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/mess)
 "cu" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 8
@@ -969,6 +1002,13 @@
 /obj/structure/lattice,
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/thirddeck/aftstarboard)
+"cw" = (
+/obj/effect/floor_decal/corner/green/half{
+	icon_state = "bordercolorhalf";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aft)
 "cx" = (
 /obj/machinery/telecomms/bus/preset_one,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -1563,7 +1603,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/effect/wallframe_spawn/no_grille,
@@ -1993,7 +2033,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/effect/wallframe_spawn/no_grille,
@@ -2447,7 +2487,7 @@
 /area/crew_quarters/galley)
 "fw" = (
 /obj/structure/table/marble,
-/obj/machinery/reagentgrinder,
+/obj/machinery/reagentgrinder/juicer,
 /obj/item/weapon/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
@@ -3392,6 +3432,9 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/office)
 "hr" = (
@@ -3535,7 +3578,7 @@
 "hD" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/marble,
-/obj/machinery/reagentgrinder,
+/obj/machinery/reagentgrinder/juicer,
 /turf/simulated/floor/tiled/dark,
 /area/vacant/mess)
 "hE" = (
@@ -3912,8 +3955,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "io" = (
-/obj/machinery/button/remote/blast_door{
-	id = "kitchen";
+/obj/machinery/button/blast_door{
+	id_tag = "kitchen";
 	name = "Kitchen Shutters";
 	pixel_x = 0;
 	pixel_y = -21
@@ -4040,7 +4083,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "bsa-window";
+	id_tag = "bsa-window";
 	name = "Observation Blast Door"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -4665,11 +4708,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/button/remote/airlock{
-	id = "civsafedoor";
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "civsafedoor";
 	name = "safe room door-control";
-	pixel_x = 32;
-	specialfunctions = 4
+	pixel_x = 32
 	},
 /obj/machinery/light_switch{
 	pixel_x = 24;
@@ -5766,8 +5808,8 @@
 /area/hallway/primary/thirddeck/fore)
 "ml" = (
 /obj/structure/table/standard,
-/obj/machinery/button/remote/blast_door{
-	id = "bar";
+/obj/machinery/button/blast_door{
+	id_tag = "bar";
 	name = "Bar Shutters";
 	pixel_x = -24;
 	pixel_y = 0
@@ -6269,8 +6311,7 @@
 "nE" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/reinforced/oxygen,
@@ -7120,7 +7161,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Habitation Deck Hallway Shutters";
 	opacity = 0
 	},
@@ -7432,7 +7473,7 @@
 "pV" = (
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "bar";
+	id_tag = "bar";
 	name = "Bar Shutters"
 	},
 /obj/effect/wallframe_spawn/reinforced,
@@ -7606,27 +7647,6 @@
 "qx" = (
 /turf/simulated/wall/r_wall/hull,
 /area/ai_monitored/storage/eva)
-"qy" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/civilian{
-	name = "Galley"
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/crew_quarters/galley)
 "qz" = (
 /obj/structure/table/rack{
 	dir = 8
@@ -7804,8 +7824,7 @@
 "qW" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -7829,6 +7848,15 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/hallway/primary/thirddeck/aft)
+"ra" = (
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 5
+	},
+/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/thirddeck/aft)
 "rb" = (
@@ -7855,9 +7883,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "re" = (
-/obj/machinery/door/airlock/glass/civilian,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/green/half,
+/turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "rf" = (
 /obj/effect/floor_decal/corner/green{
@@ -8445,7 +8472,6 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/center)
 "si" = (
@@ -8508,7 +8534,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Habitation Deck Hallway Shutters";
 	opacity = 0
 	},
@@ -8661,23 +8687,21 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aft)
 "sv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aft)
 "sw" = (
 /obj/structure/cable/green{
@@ -8765,21 +8789,21 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/aft)
 "sB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/catwalk_plated,
+/obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/aft)
 "sC" = (
@@ -8799,25 +8823,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/aft)
-"sD" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aft)
 "sE" = (
 /obj/effect/catwalk_plated,
@@ -9027,7 +9032,7 @@
 /obj/machinery/door/airlock/external,
 /obj/machinery/door/blast/regular{
 	dir = 1;
-	id = "d3starboardnacelle";
+	id_tag = "d3starboardnacelle";
 	implicit_material = null
 	},
 /turf/simulated/floor/reinforced,
@@ -9323,7 +9328,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "tN" = (
-/obj/structure/bed/pew/left/mahogany,
+/obj/structure/bed/chair/pew/left/mahogany,
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
@@ -9354,6 +9359,9 @@
 	},
 /obj/effect/floor_decal/corner/green{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
@@ -9503,7 +9511,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -9873,10 +9881,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/chaplain{
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/chaplain{
 	name = "Chapel"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/machinery/holosign/chapel{
+	id_tag = "chapel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/chapel/main)
 "vs" = (
@@ -10049,7 +10060,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -10650,7 +10661,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -10773,7 +10784,7 @@
 	icon_state = "chapel";
 	dir = 1
 	},
-/obj/structure/bed/pew/mahogany,
+/obj/structure/bed/chair/pew/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "xt" = (
@@ -10781,7 +10792,7 @@
 	icon_state = "chapel";
 	dir = 4
 	},
-/obj/structure/bed/pew/left/mahogany,
+/obj/structure/bed/chair/pew/left/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "xu" = (
@@ -11034,7 +11045,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -11272,12 +11283,12 @@
 	icon_state = "chapel";
 	dir = 8
 	},
-/obj/structure/bed/pew/mahogany,
+/obj/structure/bed/chair/pew/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "yw" = (
 /obj/effect/floor_decal/chapel,
-/obj/structure/bed/pew/left/mahogany,
+/obj/structure/bed/chair/pew/left/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "yz" = (
@@ -11345,7 +11356,7 @@
 "yO" = (
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "teleport3";
+	id_tag = "teleport3";
 	name = "Third Deck Teleporter Access Shutters"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -11639,15 +11650,15 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
-/obj/structure/bed/pew/mahogany,
+/obj/structure/bed/chair/pew/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "zs" = (
-/obj/structure/bed/pew/left/mahogany,
+/obj/structure/bed/chair/pew/left/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "zu" = (
-/obj/structure/bed/pew/mahogany,
+/obj/structure/bed/chair/pew/mahogany,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "zx" = (
@@ -11722,8 +11733,8 @@
 /area/teleporter/thirddeck)
 "zI" = (
 /obj/machinery/teleport/station,
-/obj/machinery/button/remote/blast_door{
-	id = "teleport3";
+/obj/machinery/button/blast_door{
+	id_tag = "teleport3";
 	name = "Third Deck Teleporter Access Shutter Control";
 	pixel_x = -6;
 	pixel_y = 24
@@ -11930,7 +11941,7 @@
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -12175,14 +12186,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "Bb" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/tvalve/mirrored/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor,
@@ -12393,6 +12400,10 @@
 /area/security/range)
 "BF" = (
 /obj/effect/floor_decal/spline/fancy/black,
+/obj/item/device/radio/intercom/entertainment{
+	dir = 1;
+	pixel_y = -28
+	},
 /turf/simulated/floor/wood/maple,
 /area/chapel/main)
 "BG" = (
@@ -12792,7 +12803,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13264,8 +13275,7 @@
 "DX" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/reinforced/oxygen,
@@ -13508,6 +13518,10 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo)
+"Eu" = (
+/obj/effect/floor_decal/corner/red/half,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/center)
 "Ew" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -14661,7 +14675,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "bsa-window";
+	id_tag = "bsa-window";
 	name = "Observation Blast Door"
 	},
 /turf/simulated/floor/plating,
@@ -14807,7 +14821,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "bsa-window";
+	id_tag = "bsa-window";
 	name = "Observation Blast Door"
 	},
 /turf/simulated/floor/plating,
@@ -14879,7 +14893,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id = "bsa-core";
+	id_tag = "bsa-core";
 	name = "BSA Blast Door"
 	},
 /turf/simulated/floor/airless,
@@ -15278,8 +15292,7 @@
 "Jm" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -16121,8 +16134,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3starboard)
 "KO" = (
-/obj/machinery/button/remote/blast_door{
-	id = "d3starboardnacelle";
+/obj/machinery/button/blast_door{
+	id_tag = "d3starboardnacelle";
 	name = "combustion chamber blast door controll";
 	pixel_x = 0;
 	pixel_y = -24
@@ -16138,16 +16151,16 @@
 /area/thruster/d3starboard)
 "KS" = (
 /obj/structure/table/steel,
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for shutters.";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Checkpoint Window Shutters";
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for shutters.";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Hallway Checkpoint Shutters";
 	pixel_x = -3;
 	pixel_y = -3
@@ -16207,7 +16220,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/effect/wallframe_spawn/no_grille,
@@ -16264,7 +16277,7 @@
 "Li" = (
 /obj/machinery/door/blast/regular{
 	dir = 1;
-	id = "cChamber3pV";
+	id_tag = "cChamber3pV";
 	name = "Chamber Vent"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -16311,8 +16324,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3port)
 "Lo" = (
-/obj/machinery/button/remote/blast_door{
-	id = "d3portnacelle";
+/obj/machinery/button/blast_door{
+	id_tag = "d3portnacelle";
 	name = "combustion chamber blast door controll";
 	pixel_x = 0;
 	pixel_y = 24
@@ -16437,7 +16450,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/green/half,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "Lz" = (
 /obj/machinery/door/firedoor/border_only,
@@ -16548,7 +16561,7 @@
 /area/space)
 "LO" = (
 /obj/machinery/sparker{
-	id = "engines";
+	id_tag = "engines";
 	pixel_x = -24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
@@ -16588,7 +16601,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -17440,6 +17453,11 @@
 	pixel_x = 6;
 	pixel_y = 24
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = 4
+	},
 /turf/simulated/floor/carpet/purple,
 /area/chapel/office)
 "OH" = (
@@ -17561,10 +17579,9 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/thirddeck/aft)
 "OZ" = (
 /obj/machinery/door/firedoor/border_only,
@@ -18025,7 +18042,7 @@
 /obj/machinery/smartfridge/foods,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /turf/simulated/floor/tiled/white,
@@ -18396,8 +18413,7 @@
 "RM" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	frequency = 1447;
-	id = "fuelmode"
+	id_tag = "fuelmode"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -18501,7 +18517,7 @@
 "Sg" = (
 /obj/machinery/door/blast/regular{
 	dir = 1;
-	id = "cChamber3sV";
+	id_tag = "cChamber3sV";
 	name = "Chamber Vent"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -18518,7 +18534,7 @@
 	name = "exterior access button";
 	pixel_x = 24;
 	pixel_y = 24;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"))
+	req_access = list("ACCESS_EVA")
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -18527,7 +18543,7 @@
 /obj/machinery/door/airlock/external,
 /obj/machinery/door/blast/regular{
 	dir = 1;
-	id = "d3portnacelle"
+	id_tag = "d3portnacelle"
 	},
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
@@ -19008,7 +19024,7 @@
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
-	id = "kitchen";
+	id_tag = "kitchen";
 	name = "Kitchen Shutters"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -19064,7 +19080,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/port)
 "TR" = (
-/obj/effect/wallframe_spawn/no_grille,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
+	id = "chapel_windows"
+	},
 /turf/simulated/floor/plating,
 /area/chapel/main)
 "TS" = (
@@ -19104,18 +19122,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/office)
-"TZ" = (
-/obj/machinery/door/airlock/command{
-	autoset_access = 0;
-	name = "Officer's Mess";
-	req_access = list(list("ACCESS_BRIDGE","ACCESS_KITCHEN","ACCESS_TORCH_SENIOR_MED","ACCESS_PSYCHIATRIST"))
-	},
-/obj/effect/floor_decal/corner/blue/diagonal{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/mess)
 "Ub" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -19176,7 +19182,7 @@
 	},
 /obj/machinery/door/blast/shutters{
 	dir = 4;
-	id = "bar";
+	id_tag = "bar";
 	name = "Bar Shutters"
 	},
 /turf/simulated/floor/lino,
@@ -19321,7 +19327,7 @@
 	density = 0;
 	dir = 2;
 	icon_state = "shutter0";
-	id = "hab_checkpoint_shutters";
+	id_tag = "hab_checkpoint_shutters";
 	name = "Hangar Deck Checkpoint Shutters";
 	opacity = 0
 	},
@@ -19410,12 +19416,11 @@
 	icon_state = "techfloor_edges";
 	dir = 6
 	},
-/obj/machinery/button/remote/airlock{
-	id = "civsafedoorport";
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "civsafedoorport";
 	name = "safe room door-control";
 	pixel_x = -32;
-	pixel_y = -32;
-	specialfunctions = 4
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/thirddeck)
@@ -19444,7 +19449,7 @@
 /area/hallway/primary/thirddeck/center)
 "UR" = (
 /obj/machinery/sparker{
-	id = "engines";
+	id_tag = "engines";
 	pixel_x = -24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
@@ -19563,7 +19568,7 @@
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
-	id = "bar";
+	id_tag = "bar";
 	name = "Bar Shutters"
 	},
 /turf/simulated/floor/lino,
@@ -19576,7 +19581,7 @@
 	name = "interior access button";
 	pixel_x = -24;
 	pixel_y = 24;
-	req_access = list("ACCESS_MAINT")
+	req_access = list("ACCESS_EVA")
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1;
@@ -19630,7 +19635,7 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
-	id = "bsa-window";
+	id_tag = "bsa-window";
 	name = "Observation Blast Door"
 	},
 /turf/simulated/floor/plating,
@@ -19700,7 +19705,7 @@
 	icon_state = "bordercolorhalf";
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "VD" = (
 /obj/structure/catwalk,
@@ -19797,16 +19802,16 @@
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the Bluespace Artillery's core.";
-	id = "bsa-core";
+	id_tag = "bsa-core";
 	name = "Artillery Core Blast Doors";
 	pixel_x = -5;
 	pixel_y = 28
 	},
-/obj/machinery/button/remote/blast_door{
+/obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the Bluespace Artillery observation windows.";
-	id = "bsa-window";
+	id_tag = "bsa-window";
 	name = "Observation Blast Doors";
 	pixel_x = 5;
 	pixel_y = 28
@@ -20036,7 +20041,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Habitation Deck Hallway Shutters";
 	opacity = 0
 	},
@@ -20124,6 +20129,20 @@
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
+	},
+/obj/machinery/button/windowtint{
+	id = "chapel_windows";
+	pixel_x = -10;
+	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 18
+	},
+/obj/machinery/button/holosign{
+	id_tag = "chapel";
+	pixel_x = -10;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -20575,7 +20594,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Habitation Deck Hallway Shutters";
 	opacity = 0
 	},
@@ -20625,7 +20644,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
 "Yd" = (
-/obj/structure/computerframe,
+/obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
 "Ye" = (
@@ -20643,7 +20662,7 @@
 	id_tag = "eva_airlock";
 	name = "EVA Airlock Console";
 	pixel_y = -24;
-	req_access = list(list("ACCESS_SECURITY","ACCESS_MEDICAL","ACCESS_ENGINE_EQUIP","ACCESS_EVA","ACCESS_ATMOS"));
+	req_access = list("ACCESS_EVA");
 	tag_airpump = "eva_pump";
 	tag_chamber_sensor = "eva_sensor";
 	tag_exterior_door = "eva_outer";
@@ -20686,7 +20705,7 @@
 /area/crew_quarters/bar)
 "Ym" = (
 /obj/structure/table/standard,
-/obj/machinery/reagentgrinder,
+/obj/machinery/reagentgrinder/juicer,
 /obj/item/weapon/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
@@ -20737,7 +20756,7 @@
 /area/engineering/engine_eva)
 "Yx" = (
 /obj/structure/table/standard,
-/obj/machinery/reagentgrinder{
+/obj/machinery/reagentgrinder/juicer{
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -20851,7 +20870,7 @@
 	density = 0;
 	dir = 4;
 	icon_state = "shutter0";
-	id = "hab_hallway_shutters";
+	id_tag = "hab_hallway_shutters";
 	name = "Habitation Deck Hallway Shutters";
 	opacity = 0
 	},
@@ -38503,7 +38522,7 @@ Kn
 ev
 Lb
 CO
-qy
+cs
 ev
 ev
 jX
@@ -39719,7 +39738,7 @@ hy
 fB
 fB
 nD
-TZ
+ct
 nD
 fB
 fB
@@ -41142,7 +41161,7 @@ Wb
 Wb
 VC
 RQ
-tP
+Eu
 uZ
 we
 RL
@@ -41342,7 +41361,7 @@ RW
 Oc
 Jg
 Wb
-re
+sW
 sv
 re
 uZ
@@ -41544,7 +41563,7 @@ VF
 VF
 WB
 Zb
-PX
+cw
 su
 Ly
 VG
@@ -43162,7 +43181,7 @@ pm
 Wl
 cg
 sz
-ji
+re
 Em
 YQ
 xl
@@ -43362,7 +43381,7 @@ dJ
 dL
 Mh
 Wl
-rk
+ra
 sB
 OY
 TD
@@ -43766,9 +43785,9 @@ gN
 gN
 gN
 gN
-rp
-sD
-rp
+sW
+sv
+sW
 Un
 wo
 xo

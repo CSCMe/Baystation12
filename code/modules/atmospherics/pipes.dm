@@ -198,9 +198,10 @@
 		..()
 	else if(leaking)
 		parent.mingle_with_turf(loc, volume)
-		if(!sound_token && parent.air.return_pressure())
+		var/air = parent.air && parent.air.return_pressure()
+		if(!sound_token && air)
 			update_sound(1)
-		else if(sound_token && !parent.air.return_pressure())
+		else if(sound_token && !air)
 			update_sound(0)
 	else
 		. = PROCESS_KILL
@@ -1153,7 +1154,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal
 	name="Universal pipe adapter"
 	desc = "An adapter for regular, supply, scrubbers, and fuel pipes."
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL|CONNECT_TYPE_HE
 	icon_state = "map_universal"
 	build_icon_state = "universal"
 
@@ -1189,7 +1190,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal
 	name="Universal pipe adapter"
 	desc = "An adapter for regular, supply and scrubbers pipes."
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_SCRUBBER
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL|CONNECT_TYPE_HE
 	icon_state = "map_universal"
 
 /obj/machinery/atmospherics/pipe/simple/hidden/universal/on_update_icon(var/safety = 0)

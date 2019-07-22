@@ -666,7 +666,6 @@
 	name = "Officer's Mess"
 	icon_state = "bar"
 	sound_env = MEDIUM_SOFTFLOOR
-	req_access = list(list(access_bridge, access_kitchen))
 
 /area/command/pathfinder
 	name = "\improper Pathfinder's Office"
@@ -912,6 +911,11 @@
 	icon_state = "mining"
 	req_access = list(list(access_mining, access_explorer, access_xenoarch))
 
+/area/quartermaster/expedition/atmos
+	name = "\improper Hangar Atmospheric Storage"
+	icon_state = "mining"
+	req_access = list(list(access_mining, access_explorer, access_xenoarch))
+
 /area/quartermaster/exploration
 	name = "\improper Exploration Equipment"
 	icon_state = "exploration"
@@ -1060,6 +1064,10 @@
 
 /area/security/processing
 	name = "\improper Security Processing"
+	icon_state = "security"
+
+/area/security/questioning
+	name = "\improper Security Interview Room One"
 	icon_state = "security"
 
 /area/security/wing
@@ -1621,7 +1629,7 @@
 	req_access = list(access_armory)
 
 /area/security/detectives_office
-	name = "\improper Security - Forensic Office"
+	name = "\improper Security - Investigations Office"
 	icon_state = "detective"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_forensics_lockers)

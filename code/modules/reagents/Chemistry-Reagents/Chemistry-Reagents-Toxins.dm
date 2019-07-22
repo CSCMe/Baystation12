@@ -455,7 +455,7 @@
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
-	if(M.chem_doses[type] == metabolism * threshold)
+	if(M.chem_doses[type] >= metabolism * threshold)
 		M.confused += 2
 		M.drowsyness += 2
 	else if(M.chem_doses[type] < 2 * threshold)
@@ -478,6 +478,38 @@
 
 	glass_name = "beer"
 	glass_desc = "A freezing pint of beer"
+
+/datum/reagent/vecuronium_bromide
+	name = "Vecuronium Bromide"
+	description = "A powerful paralytic."
+	taste_description = "metallic"
+	reagent_state = SOLID
+	color = "#ff337d"
+	metabolism = REM * 0.5
+	overdose = REAGENTS_OVERDOSE * 0.5
+	value = 2.6
+
+/datum/reagent/vecuronium_bromide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+
+	var/threshold = 2
+	if(alien == IS_SKRELL)
+		threshold = 1.2
+
+	if(M.chem_doses[type] >= metabolism * threshold)
+		M.confused = max(M.confused, 2)
+	if(M.chem_doses[type] >= 3 * threshold)
+		M.Weaken(30)
+		M.make_dizzy(3)
+		M.add_chemical_effect(CE_SEDATE, 1)
+		M.add_chemical_effect(CE_VOICELOSS, 1)
+		M.eye_blurry = max(M.eye_blurry, 10)
+		to_chat(M, SPAN_WARNING("Your muscles slacken and cease to obey you."))
+
+	if(M.chem_doses[type] > 1 * threshold)
+		M.adjustToxLoss(removed)
+
 /* Drugs */
 
 /datum/reagent/space_drugs
@@ -774,7 +806,7 @@
 		M.drop_from_inventory(W)
 	var/mob/living/carbon/slime/new_mob = new /mob/living/carbon/slime(M.loc)
 	new_mob.a_intent = "hurt"
-	new_mob.universal_speak = 1
+	new_mob.universal_speak = TRUE
 	if(M.mind)
 		M.mind.transfer_to(new_mob)
 	else
@@ -857,6 +889,20 @@
 	heating_products = null
 	heating_point = null
 
+/datum/reagent/toxin/bromide/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_MANTID)
+		. = ..()
+
+/datum/reagent/toxin/bromide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_MANTID)
+		M.add_chemical_effect(CE_OXYGENATED, 1)
+	else
+		..()
+
+/datum/reagent/toxin/bromide/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_MANTID)
+		. = ..()
+
 /datum/reagent/toxin/methyl_bromide
 	name = "Methyl Bromide"
 	description = "A fumigant derived from bromide."
@@ -867,13 +913,19 @@
 	heating_products = null
 	heating_point = null
 
+/datum/reagent/toxin/methyl_bromide/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	. = (alien != IS_MANTID && alien != IS_NABBER && ..())
+
+/datum/reagent/toxin/methyl_bromide/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	. = (alien != IS_MANTID && alien != IS_NABBER && ..())
+
 /datum/reagent/toxin/methyl_bromide/touch_turf(var/turf/simulated/T)
 	if(istype(T))
 		T.assume_gas("methyl_bromide", volume, T20C)
 		remove_self(volume)
 
 /datum/reagent/toxin/methyl_bromide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	. = ..()
+	. = (alien != IS_MANTID && alien != IS_NABBER && ..())
 	if(istype(M))
 		for(var/obj/item/organ/external/E in M.organs)
 			if(LAZYLEN(E.implants))

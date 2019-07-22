@@ -117,7 +117,6 @@
 	icon_keyboard = "rd_key"
 	icon_screen = "rdcomp"
 	light_color = "#a97faa"
-	circuit = /obj/item/weapon/stock_parts/circuitboard/rdservercontrol
 	var/screen = 0
 	var/obj/machinery/r_n_d/server/temp_server
 	var/list/servers = list()
@@ -194,14 +193,11 @@
 		temp_server.files.RefreshResearch()
 		. = TOPIC_REFRESH
 
-	if(. == TOPIC_REFRESH)
-		attack_hand(user)
+/obj/machinery/computer/rdservercontrol/interface_interact(mob/user)
+	interact(user)
+	return TRUE
 
-/obj/machinery/computer/rdservercontrol/attack_hand(mob/user)
-	if(component_attack_hand(user))
-		return TRUE
-	if(stat & (BROKEN|NOPOWER))
-		return
+/obj/machinery/computer/rdservercontrol/interact(mob/user)
 	user.set_machine(src)
 	var/dat = ""
 
@@ -264,6 +260,7 @@
 	if(!emagged)
 		playsound(src.loc, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
+		req_access.Cut()
 		to_chat(user, "<span class='notice'>You you disable the security protocols.</span>")
 		src.updateUsrDialog()
 		return 1

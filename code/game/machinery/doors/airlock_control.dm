@@ -2,7 +2,6 @@
 
 // This code allows for airlocks to be controlled externally by setting an id_tag and comm frequency (disables ID access)
 /obj/machinery/door/airlock
-	var/id_tag
 	var/frequency
 	var/shockedby = list()
 	var/datum/radio_frequency/radio_connection
@@ -117,15 +116,6 @@
 	. = ..()
 	if(!surpress_send) send_status()
 
-
-/obj/machinery/door/airlock/Bumped(atom/AM)
-	..(AM)
-	if(istype(AM, /obj/mecha))
-		var/obj/mecha/mecha = AM
-		if(density && radio_connection && mecha.occupant && (src.allowed(mecha.occupant) || src.check_access_list(mecha.operation_req_access)))
-			send_status(1)
-	return
-
 /obj/machinery/door/airlock/proc/set_frequency(new_frequency)
 	radio_controller.remove_object(src, frequency)
 	if(new_frequency)
@@ -137,10 +127,6 @@
 	. = ..()
 	if(frequency)
 		set_frequency(frequency)
-
-	//wireless connection
-	if(_wifi_id)
-		wifi_receiver = new(_wifi_id, src)
 
 	update_icon()
 
@@ -163,7 +149,6 @@
 	anchored = 1
 	power_channel = ENVIRON
 
-	var/id_tag
 	var/master_tag
 	var/frequency = 1379
 	var/command = "cycle"
@@ -183,7 +168,9 @@
 	else
 		icon_state = "airlock_sensor_off"
 
-/obj/machinery/airlock_sensor/attack_hand(mob/user)
+/obj/machinery/airlock_sensor/interface_interact(mob/user)
+	if(!CanInteract(user, DefaultTopicState()))
+		return FALSE
 	var/datum/signal/signal = new
 	signal.transmission_method = 1 //radio signal
 	signal.data["tag"] = master_tag
@@ -191,6 +178,7 @@
 
 	radio_connection.post_signal(src, signal, range = AIRLOCK_CONTROL_RANGE, radio_filter = RADIO_AIRLOCK)
 	flick("airlock_sensor_cycle", src)
+	return TRUE
 
 /obj/machinery/airlock_sensor/Process()
 	if(on)
@@ -267,12 +255,10 @@
 		return
 	..()
 
-/obj/machinery/access_button/attack_hand(mob/user)
-	..()
-	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access Denied</span>")
-
-	else if(radio_connection)
+/obj/machinery/access_button/interface_interact(mob/user)
+	if(!CanInteract(user, DefaultTopicState()))
+		return FALSE
+	if(radio_connection)
 		var/datum/signal/signal = new
 		signal.transmission_method = 1 //radio signal
 		signal.data["tag"] = master_tag
@@ -280,7 +266,7 @@
 
 		radio_connection.post_signal(src, signal, range = AIRLOCK_CONTROL_RANGE, radio_filter = RADIO_AIRLOCK)
 	flick("access_button_cycle", src)
-
+	return TRUE
 
 /obj/machinery/access_button/proc/set_frequency(new_frequency)
 	radio_controller.remove_object(src, frequency)

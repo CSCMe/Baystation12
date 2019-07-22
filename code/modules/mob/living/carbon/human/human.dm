@@ -102,10 +102,6 @@
 				stat("Tank Pressure", internal.air_contents.return_pressure())
 				stat("Distribution Pressure", internal.distribute_pressure)
 
-		var/obj/item/organ/internal/xeno/plasmavessel/P = internal_organs_by_name[BP_PLASMA]
-		if(P)
-			stat(null, "Phoron Stored: [P.stored_plasma]/[P.max_plasma]")
-
 		var/obj/item/organ/internal/cell/potato = internal_organs_by_name[BP_CELL]
 		if(potato && potato.cell)
 			stat("Battery charge:", "[potato.get_charge()]/[potato.cell.maxcharge]")
@@ -1080,8 +1076,10 @@
 
 	default_pixel_x = initial(pixel_x) + species.pixel_offset_x
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
+	default_pixel_z = initial(pixel_z) + species.pixel_offset_z
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
+	pixel_z = default_pixel_z
 
 	if(LAZYLEN(descriptors))
 		descriptors = null
@@ -1126,7 +1124,9 @@
 	default_run_intent = null
 	move_intent = null
 	move_intents = species.move_intents.Copy()
-	set_next_usable_move_intent()
+	set_move_intent(decls_repository.get_decl(move_intents[1]))
+	if(!istype(move_intent))
+		set_next_usable_move_intent()
 
 	if(update_lang)
 		languages.Cut()
@@ -1542,19 +1542,19 @@
 
 			switch(brutedamage)
 				if(1 to 20)
-					status += "bruised"
+					status += "slightly sore"
 				if(20 to 40)
-					status += "wounded"
+					status += "very sore"
 				if(40 to INFINITY)
-					status += "mangled"
+					status += "throbbing with agony"
 
 			switch(burndamage)
 				if(1 to 10)
-					status += "numb"
+					status += "tingling"
 				if(10 to 40)
-					status += "blistered"
+					status += "stinging"
 				if(40 to INFINITY)
-					status += "peeling away"
+					status += "burning fiercely"
 
 			if(org.is_stump())
 				status += "MISSING"
@@ -1565,7 +1565,7 @@
 			if(org.status & ORGAN_BROKEN)
 				status += "hurts when touched"
 			if(org.status & ORGAN_DEAD)
-				status += "is bruised and necrotic"
+				status += "is grey and necrotic"
 			if(!org.is_usable() || org.is_dislocated())
 				status += "dangling uselessly"
 			if(status.len)

@@ -8,6 +8,8 @@
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	volume = 100
 	construct_state = /decl/machine_construction/default/panel_closed
+	uncreated_component_parts = null
+	stat_immune = 0
 
 	var/mechanical = 1         // Set to 0 to stop it from drawing the alert lights.
 	var/base_name = "tray"
@@ -548,17 +550,16 @@
 	else if(harvest)
 		harvest(user)
 
-/obj/machinery/portable_atmospherics/hydroponics/attack_hand(mob/user as mob)
+/obj/machinery/portable_atmospherics/hydroponics/attack_robot(mob/user)
+	return FALSE // no hands
 
-	if(istype(usr,/mob/living/silicon))
-		return
-
+/obj/machinery/portable_atmospherics/hydroponics/physical_attack_hand(mob/user)
 	if(harvest)
 		harvest(user)
-	else if(dead)
+		return TRUE
+	if(dead)
 		remove_dead(user)
-	else
-		return ..()
+		return TRUE
 
 /obj/machinery/portable_atmospherics/hydroponics/examine(mob/user)
 	. = ..(user)

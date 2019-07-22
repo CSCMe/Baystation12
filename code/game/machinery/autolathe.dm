@@ -10,6 +10,8 @@
 	clickvol = 30
 	base_type = /obj/machinery/autolathe
 	construct_state = /decl/machine_construction/default/panel_closed
+	uncreated_component_parts = null
+	stat_immune = 0
 
 	var/list/machine_recipes
 	var/list/stored_material =  list(MATERIAL_STEEL = 0, MATERIAL_ALUMINIUM = 0, MATERIAL_GLASS = 0, MATERIAL_PLASTIC = 0)
@@ -24,31 +26,15 @@
 	var/mat_efficiency = 1
 	var/build_time = 50
 
-	var/datum/wires/autolathe/wires = null
-
-
-/obj/machinery/autolathe/Initialize()
-	. = ..()
-	wires = new(src)
-
-/obj/machinery/autolathe/Destroy()
-	QDEL_NULL(wires)
-	return ..()
+	wires = /datum/wires/autolathe
 
 /obj/machinery/autolathe/proc/update_recipe_list()
 	if(!machine_recipes)
 		machine_recipes = autolathe_recipes
 
-/obj/machinery/autolathe/interact(mob/user as mob)
-
+/obj/machinery/autolathe/interact(mob/user)
+	user.set_machine(src)
 	update_recipe_list()
-
-	if(..() || (disabled && !panel_open))
-		to_chat(user, "<span class='danger'>\The [src] is disabled!</span>")
-		return
-
-	if(shocked)
-		shock(user, 50)
 
 	var/dat = "<center><h1>Autolathe Control Panel</h1><hr/>"
 
@@ -104,12 +90,6 @@
 			dat += "<tr><td width = 180>[R.hidden ? "<font color = 'red'>*</font>" : ""]<b>[can_make ? "<a href='?src=\ref[src];make=[index];multiplier=1'>" : ""][R.name][can_make ? "</a>" : ""]</b>[R.hidden ? "<font color = 'red'>*</font>" : ""][multiplier_string]</td><td align = right>[material_string]</tr>"
 
 		dat += "</table><hr>"
-	//Hacking.
-	if(panel_open)
-		dat += "<h2>Maintenance Panel</h2>"
-		dat += wires.GetInteractWindow(user)
-
-		dat += "<hr>"
 
 	var/datum/browser/popup = new(user, "autolathenew", "Autholathe", 450, 600)
 	popup.set_content(dat)
@@ -203,11 +183,17 @@
 
 	updateUsrDialog()
 
-/obj/machinery/autolathe/attack_hand(mob/user)
-	if(component_attack_hand(user))
+/obj/machinery/autolathe/physical_attack_hand(mob/user)
+	if(shocked)
+		shock(user, 50)
 		return TRUE
-	user.set_machine(src)
+
+/obj/machinery/autolathe/interface_interact(mob/user)
+	if(disabled && !panel_open)
+		to_chat(user, "<span class='danger'>\The [src] is disabled!</span>")
+		return TRUE
 	interact(user)
+	return TRUE
 
 /obj/machinery/autolathe/CanUseTopic(user, href_list)
 	if(busy)

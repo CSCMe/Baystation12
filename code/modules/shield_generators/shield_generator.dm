@@ -6,7 +6,9 @@
 	density = 1
 	base_type = /obj/machinery/power/shield_generator
 	construct_state = /decl/machine_construction/default/panel_closed
-	var/datum/wires/shield_generator/wires
+	wires = /datum/wires/shield_generator
+	uncreated_component_parts = null
+	stat_immune = 0
 	var/list/field_segments = list()	// List of all shield segments owned by this generator.
 	var/list/damaged_segments = list()	// List of shield segments that have failed and are currently regenerating.
 	var/shield_modes = 0				// Enabled shield mode flags
@@ -40,7 +42,6 @@
 /obj/machinery/power/shield_generator/New()
 	..()
 	connect_to_network()
-	wires = new(src)
 
 	mode_list = list()
 	for(var/st in subtypesof(/datum/shield_mode/))
@@ -53,7 +54,6 @@
 	field_segments = null
 	damaged_segments = null
 	mode_list = null
-	QDEL_NULL(wires)
 	. = ..()
 
 
@@ -223,13 +223,9 @@
 		ui.set_auto_update(1)
 
 
-/obj/machinery/power/shield_generator/attack_hand(var/mob/user)
-	if(component_attackby(user))
-		return TRUE
+/obj/machinery/power/shield_generator/interface_interact(var/mob/user)
 	ui_interact(user)
-	if(panel_open)
-		wires.Interact(user)
-
+	return TRUE
 
 /obj/machinery/power/shield_generator/CanUseTopic(var/mob/user)
 	if(issilicon(user) && !Adjacent(user) && ai_control_disabled)
