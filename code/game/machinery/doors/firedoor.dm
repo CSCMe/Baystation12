@@ -54,7 +54,7 @@
 	)
 
 	blend_objects = list(/obj/machinery/door/firedoor, /obj/structure/wall_frame, /turf/unsimulated/wall, /obj/structure/window) // Objects which to blend with
-	
+
 /obj/machinery/door/firedoor/autoset
 	autoset_access = TRUE	//subtype just to make mapping away sites with custom access usage
 	req_access = list()
@@ -189,18 +189,25 @@
 	if(isWelder(C) && !repairing)
 		var/obj/item/weapon/weldingtool/W = C
 		if(W.remove_fuel(0, user))
-			blocked = !blocked
-			user.visible_message("<span class='danger'>\The [user] [blocked ? "welds" : "unwelds"] \the [src] with \a [W].</span>",\
-			"You [blocked ? "weld" : "unweld"] \the [src] with \the [W].",\
-			"You hear something being welded.")
 			playsound(src, 'sound/items/Welder.ogg', 100, 1)
-			update_icon()
-			return
+			if(do_after(user, 2 SECONDS, src))
+				if(!W.isOn()) return
+				blocked = !blocked
+				user.visible_message("<span class='danger'>\The [user] [blocked ? "welds" : "unwelds"] \the [src] with \a [W].</span>",\
+				"You [blocked ? "weld" : "unweld"] \the [src] with \the [W].",\
+				"You hear something being welded.")
+				playsound(src, 'sound/items/Welder.ogg', 100, 1)
+				update_icon()
+				return
+			else
+				to_chat(user, SPAN_WARNING("You must remain still to complete this task."))
+				return
 
 	if(density && isScrewdriver(C))
 		hatch_open = !hatch_open
 		user.visible_message("<span class='danger'>[user] has [hatch_open ? "opened" : "closed"] \the [src] maintenance hatch.</span>",
 									"You have [hatch_open ? "opened" : "closed"] the [src] maintenance hatch.")
+		playsound(loc, 'sound/items/Screwdriver.ogg', 50, 1)
 		update_icon()
 		return
 
@@ -426,48 +433,3 @@
 	overlays += panel_overlay
 	overlays += weld_overlay
 	overlays += lights_overlay
-
-//These are playing merry hell on ZAS.  Sorry fellas :(
-
-/obj/machinery/door/firedoor/border_only
-/*
-	icon = 'icons/obj/doors/edge_Doorfire.dmi'
-	glass = 1 //There is a glass window so you can see through the door
-			  //This is needed due to BYOND limitations in controlling visibility
-	heat_proof = 1
-	air_properties_vary_with_direction = 1
-
-	CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-		if(istype(mover) && mover.checkpass(PASS_FLAG_GLASS))
-			return 1
-		if(get_dir(loc, target) == dir) //Make sure looking at appropriate border
-			if(air_group) return 0
-			return !density
-		else
-			return 1
-
-	CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
-		if(istype(mover) && mover.checkpass(PASS_FLAG_GLASS))
-			return 1
-		if(get_dir(loc, target) == dir)
-			return !density
-		else
-			return 1
-
-
-	update_nearby_tiles(need_rebuild)
-		if(!air_master) return 0
-
-		var/turf/simulated/source = loc
-		var/turf/simulated/destination = get_step(source,dir)
-
-		update_heat_protection(loc)
-
-		if(istype(source)) air_master.tiles_to_update += source
-		if(istype(destination)) air_master.tiles_to_update += destination
-		return 1
-*/
-
-/obj/machinery/door/firedoor/multi_tile
-	icon = 'icons/obj/doors/DoorHazard2x1.dmi'
-	width = 2

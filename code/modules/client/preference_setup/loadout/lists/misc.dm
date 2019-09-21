@@ -217,7 +217,7 @@
 /datum/gear/bible/New()
 	..()
 	var/books = list()
-	books["bible"] = /obj/item/weapon/storage/bible
+	books["bible (adjustable)"] = /obj/item/weapon/storage/bible
 	books["Bible"] = /obj/item/weapon/storage/bible/bible
 	books["Tanakh"] = /obj/item/weapon/storage/bible/tanakh
 	books["Quran"] = /obj/item/weapon/storage/bible/quran
@@ -230,3 +230,17 @@
 	path = /obj/item/weapon/material/knife/folding/swiss
 	cost = 4
 	flags = GEAR_HAS_COLOR_SELECTION
+
+
+/datum/gear/cross
+	display_name = "cross"
+	path = /obj/item/weapon/material/cross
+	cost = 2
+
+/datum/gear/cross/New()
+	..()
+	var/crosstype = list()
+	crosstype["cross, wood"] = /obj/item/weapon/material/cross/wood
+	crosstype["cross, silver"] = /obj/item/weapon/material/cross/silver
+	crosstype["cross, gold"] = /obj/item/weapon/material/cross/gold
+	gear_tweaks += new/datum/gear_tweak/path(crosstype)

@@ -89,11 +89,32 @@
 		generic_waypoints -= landmark
 
 /obj/effect/overmap/proc/get_waypoints(var/shuttle_name)
-	. = generic_waypoints.Copy()
-	if(shuttle_name in restricted_waypoints)
-		. += restricted_waypoints[shuttle_name]
+	. = list()
 	for(var/obj/effect/overmap/contained in src)
 		. += contained.get_waypoints(shuttle_name)
+	for(var/thing in generic_waypoints)
+		.[thing] = name
+	if(shuttle_name in restricted_waypoints)
+		for(var/thing in restricted_waypoints[shuttle_name])
+			.[thing] = name
+
+/obj/effect/overmap/proc/generate_skybox()
+	return
+
+//Overlay of how this object should look on other skyboxes
+/obj/effect/overmap/proc/get_skybox_representation()
+	return
+
+/obj/effect/overmap/Crossed(var/obj/effect/overmap/other)
+	if(istype(other))
+		for(var/obj/effect/overmap/O in loc)
+			SSskybox.rebuild_skyboxes(O.map_z)
+
+/obj/effect/overmap/Uncrossed(var/obj/effect/overmap/other)
+	if(istype(other))
+		SSskybox.rebuild_skyboxes(other.map_z)
+		for(var/obj/effect/overmap/O in loc)
+			SSskybox.rebuild_skyboxes(O.map_z)
 
 /obj/effect/overmap/sector
 	name = "generic sector"

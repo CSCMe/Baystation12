@@ -89,7 +89,7 @@
 // Convoluted setup so defines can be supplied by Bay12 main server compile script.
 // Should still work fine for people jamming the icons into their repo.
 #ifndef CUSTOM_ITEM_CONFIG
-#define CUSTOM_ITEM_CONFIG "config/custom_items.txt"
+#define CUSTOM_ITEM_CONFIG "config/custom_items/"
 #endif
 #ifndef CUSTOM_ITEM_SYNTH_CONFIG
 #define CUSTOM_ITEM_SYNTH_CONFIG "config/custom_sprites.txt"
@@ -205,10 +205,10 @@
 //Error handler defines
 #define ERROR_USEFUL_LEN 2
 
-#define RAD_LEVEL_LOW 0.5 // Around the level at which radiation starts to become harmful
+#define RAD_LEVEL_LOW 1 // Around the level at which radiation starts to become harmful
 #define RAD_LEVEL_MODERATE 5
-#define RAD_LEVEL_HIGH 25
-#define RAD_LEVEL_VERY_HIGH 75
+#define RAD_LEVEL_HIGH 20
+#define RAD_LEVEL_VERY_HIGH 40
 
 #define RADIATION_THRESHOLD_CUTOFF 0.1	// Radiation will not affect a tile when below this value.
 

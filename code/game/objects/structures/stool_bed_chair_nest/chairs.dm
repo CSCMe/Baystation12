@@ -9,6 +9,11 @@
 	obj_flags = OBJ_FLAG_ROTATABLE
 	var/propelled = 0 // Check for fire-extinguisher-driven chairs
 
+/obj/structure/bed/chair/do_simple_ranged_interaction(var/mob/user)
+	if(!buckled_mob && user)
+		rotate(user)
+	return TRUE
+
 /obj/structure/bed/chair/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()
 	if(!padding_material && istype(W, /obj/item/assembly/shock_kit))
@@ -26,13 +31,6 @@
 		SK.master = E
 		qdel(src)
 
-/obj/structure/bed/chair/attack_tk(mob/user)
-	if(buckled_mob)
-		..()
-	else
-		rotate(user)
-	return
-
 /obj/structure/bed/chair/post_buckle_mob()
 	update_icon()
 	return ..()
@@ -45,7 +43,6 @@
 		var/image/I = image('icons/obj/furniture.dmi', "[base_icon]_over")
 		if(material_alteration & MATERIAL_ALTERATION_COLOR)
 			I.color = material.icon_colour
-		I.plane = ABOVE_HUMAN_PLANE
 		I.layer = ABOVE_HUMAN_LAYER
 		stool_cache[cache_key] = I
 	overlays |= stool_cache[cache_key]
@@ -56,7 +53,6 @@
 			var/image/I =  image(icon, "[base_icon]_padding_over")
 			if(material_alteration & MATERIAL_ALTERATION_COLOR)
 				I.color = padding_material.icon_colour
-			I.plane = ABOVE_HUMAN_PLANE
 			I.layer = ABOVE_HUMAN_LAYER
 			stool_cache[padding_cache_key] = I
 		overlays |= stool_cache[padding_cache_key]
@@ -66,7 +62,6 @@
 			cache_key = "[base_icon]-armrest-[padding_material.name]"
 		if(isnull(stool_cache[cache_key]))
 			var/image/I = image(icon, "[base_icon]_armrest")
-			I.plane = ABOVE_HUMAN_PLANE
 			I.layer = ABOVE_HUMAN_LAYER
 			if(material_alteration & MATERIAL_ALTERATION_COLOR)
 				I.color = material.icon_colour
@@ -76,7 +71,6 @@
 			cache_key = "[base_icon]-padding-armrest-[padding_material.name]"
 			if(isnull(stool_cache[cache_key]))
 				var/image/I = image(icon, "[base_icon]_padding_armrest")
-				I.plane = ABOVE_HUMAN_PLANE
 				I.layer = ABOVE_HUMAN_LAYER
 				if(material_alteration & MATERIAL_ALTERATION_COLOR)
 					I.color = padding_material.icon_colour
@@ -100,7 +94,7 @@
 	..(newloc, newmaterial, MATERIAL_CARPET)
 
 /obj/structure/bed/chair/padded/brown/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
-	..(newloc, newmaterial, MATERIAL_LEATHER)
+	..(newloc, newmaterial, MATERIAL_LEATHER_GENERIC)
 
 /obj/structure/bed/chair/padded/teal/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
 	..(newloc, newmaterial, "teal")
@@ -134,7 +128,7 @@
 	base_icon = "comfychair"
 
 /obj/structure/bed/chair/comfy/brown/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
-	..(newloc, newmaterial, MATERIAL_LEATHER)
+	..(newloc, newmaterial, MATERIAL_LEATHER_GENERIC)
 
 /obj/structure/bed/chair/comfy/red/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
 	..(newloc, newmaterial, MATERIAL_CARPET)
@@ -173,7 +167,6 @@
 /obj/structure/bed/chair/comfy/captain/on_update_icon()
 	..()
 	var/image/I = image(icon, "[base_icon]_special")
-	I.plane = ABOVE_HUMAN_PLANE
 	I.layer = ABOVE_HUMAN_LAYER
 	overlays |= I
 
@@ -187,7 +180,7 @@
 	base_icon = "armchair"
 
 /obj/structure/bed/chair/armchair/brown/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
-	..(newloc, newmaterial, MATERIAL_LEATHER)
+	..(newloc, newmaterial, MATERIAL_LEATHER_GENERIC)
 
 /obj/structure/bed/chair/armchair/red/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
 	..(newloc, newmaterial, MATERIAL_CARPET)
@@ -273,7 +266,7 @@
 	base_icon = "comfyofficechair"
 
 /obj/structure/bed/chair/office/comfy/brown/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
-	..(newloc, newmaterial, MATERIAL_LEATHER)
+	..(newloc, newmaterial, MATERIAL_LEATHER_GENERIC)
 
 /obj/structure/bed/chair/office/comfy/red/New(newloc, newmaterial = DEFAULT_FURNITURE_MATERIAL)
 	..(newloc, newmaterial, MATERIAL_CARPET)
@@ -320,7 +313,6 @@
 	..()
 	if(!buckled_mob)
 		var/image/I = image(icon, "[base_icon]_special")
-		I.plane = ABOVE_HUMAN_PLANE
 		I.layer = ABOVE_HUMAN_LAYER
 		if(material_alteration & MATERIAL_ALTERATION_COLOR)
 			I.color = material.icon_colour

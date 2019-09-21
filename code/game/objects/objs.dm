@@ -124,7 +124,7 @@
 		if(damtype == BURN)
 			. |= DAM_LASER
 
-/obj/attackby(obj/item/O as obj, mob/user as mob)
+/obj/attackby(obj/item/O, mob/user)
 	if(obj_flags & OBJ_FLAG_ANCHORABLE)
 		if(isWrench(O))
 			wrench_floor_bolts(user)
@@ -161,7 +161,7 @@
 	..()
 	
 /obj/examine(mob/user)
-	. = ..(user)
+	. = ..()
 	if(. && (obj_flags & OBJ_FLAG_ROTATABLE))
 		to_chat(user, "<span class='subtle'>Can be rotated with alt-click.</span>")
 

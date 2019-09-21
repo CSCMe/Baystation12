@@ -127,6 +127,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else
 		pref.body_markings &= GLOB.body_marking_styles_list
 
+	sanitize_organs()
+
 	var/list/last_descriptors = list()
 	if(islist(pref.body_descriptors))
 		last_descriptors = pref.body_descriptors.Copy()
@@ -372,7 +374,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 			pref.cultural_info = mob_species.default_cultural_info.Copy()
 
-			if(!has_flag(pref.species, HAS_UNDERWEAR))
+			sanitize_organs()
+
+			if(!has_flag(all_species[pref.species], HAS_UNDERWEAR))
 				pref.all_underwear.Cut()
 
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -457,9 +461,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/list/usable_markings = pref.body_markings.Copy() ^ GLOB.body_marking_styles_list.Copy()
 		for(var/M in usable_markings)
 			var/datum/sprite_accessory/S = usable_markings[M]
-			if(!S.species_allowed.len)
-				continue
-			else if(!(pref.species in S.species_allowed))
+			if((S.species_allowed && !(mob_species.get_bodytype() in S.species_allowed)) || (S.subspecies_allowed && !(mob_species.name in S.subspecies_allowed)))
 				usable_markings -= M
 
 		var/new_marking = input(user, "Choose a body marking:", CHARACTER_PREFERENCE_INPUT_TITLE)  as null|anything in usable_markings
@@ -624,6 +626,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				organ = BP_KIDNEYS
 
 		var/list/organ_choices = list("Normal","Assisted","Synthetic")
+
+		if(mob_species && mob_species.spawn_flags & SPECIES_NO_ROBOTIC_INTERNAL_ORGANS)
+			organ_choices -= "Assisted"
+			organ_choices -= "Synthetic"
+
 		if(pref.organ_data[BP_CHEST] == "cyborg")
 			organ_choices -= "Normal"
 			organ_choices += "Synthetic"
@@ -638,6 +645,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				pref.organ_data[organ] = "assisted"
 			if("Synthetic")
 				pref.organ_data[organ] = "mechanical"
+
+		sanitize_organs()
 		return TOPIC_REFRESH
 
 	else if(href_list["disabilities"])
@@ -682,3 +691,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else
 		//this shouldn't happen
 		pref.f_style = GLOB.facial_hair_styles_list["Shaved"]
+
+/datum/category_item/player_setup_item/physical/body/proc/sanitize_organs()
+	var/datum/species/mob_species = all_species[pref.species]
+	if(mob_species && mob_species.spawn_flags & SPECIES_NO_ROBOTIC_INTERNAL_ORGANS)
+		for(var/name in pref.organ_data)
+			var/status = pref.organ_data[name]
+			if(status in list("assisted","mechanical"))
+				pref.organ_data[name] = null

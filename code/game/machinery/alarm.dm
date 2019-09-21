@@ -1,18 +1,18 @@
 /decl/environment_data
 	var/list/important_gasses = list(
-		"oxygen" =         TRUE,
-		"nitrogen" =       TRUE,
-		"carbon_dioxide" = TRUE
+		GAS_OXYGEN =         TRUE,
+		GAS_NITROGEN =       TRUE,
+		GAS_CO2 = TRUE
 	)
 	var/list/dangerous_gasses = list(
-		"carbon_dioxide" = TRUE
+		GAS_CO2 = TRUE
 	)
 	var/list/filter_gasses = list(
-		"oxygen" =         list("command" = "o2_scrub",  "value" = "filter_o2"),
-		"nitrogen" =       list("command" = "n2_scrub",	 "value" = "filter_n2"),
-		"carbon_dioxide" = list("command" = "co2_scrub", "value" = "filter_co2"),
-		"sleeping_agent" = list("command" = "n2o_scrub", "value" = "filter_n2o"),
-		"phoron" =         list("command" = "tox_scrub", "value" = "filter_phoron")
+		GAS_OXYGEN =         list("command" = "o2_scrub",  "value" = "filter_o2"),
+		GAS_NITROGEN =       list("command" = "n2_scrub",	 "value" = "filter_n2"),
+		GAS_CO2 = list("command" = "co2_scrub", "value" = "filter_co2"),
+		GAS_N2O = list("command" = "n2o_scrub", "value" = "filter_n2o"),
+		GAS_PHORON =         list("command" = "tox_scrub", "value" = "filter_phoron")
 	)
 
 ////////////////////////////////////////
@@ -104,6 +104,15 @@
 /obj/machinery/alarm/cold
 	target_temperature = T0C+4
 
+/decl/environment_data/finnish/Initialize()
+	. = ..()
+	important_gasses[GAS_STEAM] = TRUE
+	dangerous_gasses -= GAS_STEAM
+
+/obj/machinery/alarm/warm
+	target_temperature = T0C+75
+	environment_type = /decl/environment_data/finnish
+
 /obj/machinery/alarm/nobreach
 	breach_detection = 0
 
@@ -146,8 +155,8 @@
 		SetName("[alarm_area.name] Air Alarm")
 
 	// breathable air according to human/Life()
-	TLV["oxygen"] =			list(16, 19, 135, 140) // Partial pressure, kpa
-	TLV["carbon dioxide"] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
+	TLV[GAS_OXYGEN] =			list(16, 19, 135, 140) // Partial pressure, kpa
+	TLV[GAS_CO2] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.2, 0.5) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE*0.80,ONE_ATMOSPHERE*0.90,ONE_ATMOSPHERE*1.10,ONE_ATMOSPHERE*1.20) /* kpa */
 	TLV["temperature"] =	list(T0C-26, T0C, T0C+40, T0C+66) // K
@@ -265,8 +274,8 @@
 		other_moles += environment.gas[g] //this is only going to be used in a partial pressure calc, so we don't need to worry about group_multiplier here.
 
 	pressure_dangerlevel = get_danger_level(environment_pressure, TLV["pressure"])
-	oxygen_dangerlevel = get_danger_level(environment.gas["oxygen"]*partial_pressure, TLV["oxygen"])
-	co2_dangerlevel = get_danger_level(environment.gas["carbon_dioxide"]*partial_pressure, TLV["carbon dioxide"])
+	oxygen_dangerlevel = get_danger_level(environment.gas[GAS_OXYGEN]*partial_pressure, TLV[GAS_OXYGEN])
+	co2_dangerlevel = get_danger_level(environment.gas[GAS_CO2]*partial_pressure, TLV[GAS_CO2])
 	temperature_dangerlevel = get_danger_level(environment.temperature, TLV["temperature"])
 	other_dangerlevel = get_danger_level(other_moles*partial_pressure, TLV["other"])
 
@@ -626,8 +635,8 @@
 			var/thresholds[0]
 
 			var/list/gas_names = list(
-				"oxygen"         = "O<sub>2</sub>",
-				"carbon dioxide" = "CO<sub>2</sub>",
+				GAS_OXYGEN         = "O<sub>2</sub>",
+				GAS_CO2 = "CO<sub>2</sub>",
 				"other"          = "Other")
 			for (var/g in gas_names)
 				thresholds[++thresholds.len] = list("name" = gas_names[g], "settings" = list())
@@ -897,8 +906,8 @@ FIRE ALARM
 /obj/machinery/firealarm
 	name = "fire alarm"
 	desc = "<i>\"Pull this in case of emergency\"</i>. Thus, keep pulling it forever."
-	icon = 'icons/obj/monitors.dmi'
-	icon_state = "fire0"
+	icon = 'icons/obj/firealarm.dmi'
+	icon_state = "casing"
 	var/detecting = 1.0
 	var/working = 1.0
 	var/time = 10.0
@@ -912,6 +921,7 @@ FIRE ALARM
 	var/wiresexposed = 0
 	var/buildstage = 2 // 2 = complete, 1 = no wires,  0 = circuit gone
 	var/seclevel
+	var/global/list/overlays_cache
 
 /obj/machinery/firealarm/examine(mob/user)
 	. = ..(user)
@@ -921,6 +931,11 @@ FIRE ALARM
 /obj/machinery/firealarm/Initialize()
 	. = ..()
 	update_icon()
+
+/obj/machinery/firealarm/proc/get_cached_overlay(state)
+	if(!LAZYACCESS(overlays_cache, state))
+		LAZYSET(overlays_cache, state, image(icon, state))
+	return overlays_cache[state]
 
 /obj/machinery/firealarm/on_update_icon()
 	overlays.Cut()
@@ -939,34 +954,29 @@ FIRE ALARM
 		else if(dir == WEST)
 			pixel_x = -21
 
+	icon_state = "casing"
 	if(wiresexposed)
-		switch(buildstage)
-			if(2)
-				icon_state="fire_b2"
-			if(1)
-				icon_state="fire_b1"
-			if(0)
-				icon_state="fire_b0"
+		overlays += get_cached_overlay("b[buildstage]")
 		set_light(0)
 		return
 
 	if(stat & BROKEN)
-		icon_state = "firex"
+		overlays += get_cached_overlay("broken")
 		set_light(0)
 	else if(stat & NOPOWER)
-		icon_state = "firep"
+		overlays += get_cached_overlay("unpowered")
 		set_light(0)
 	else
-		if(!src.detecting)
-			icon_state = "fire1"
+		if(!detecting)
+			overlays += get_cached_overlay("fire1")
 			set_light(0.25, 0.1, 1, 2, COLOR_RED)
 		else if(z in GLOB.using_map.contact_levels)
-			icon_state = "fire0"
+			overlays += get_cached_overlay("fire0")
 			var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 			var/decl/security_level/sl = security_state.current_security_level
 
 			set_light(sl.light_max_bright, sl.light_inner_range, sl.light_outer_range, 2, sl.light_color_alarm)
-			src.overlays += image(sl.icon, sl.overlay_alarm)
+			overlays += image(sl.icon, sl.overlay_alarm)
 
 /obj/machinery/firealarm/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(src.detecting)

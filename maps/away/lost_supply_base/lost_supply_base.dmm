@@ -1003,7 +1003,7 @@
 /turf/simulated/wall,
 /area/lost_supply_base/common)
 "cw" = (
-/obj/machinery/food_replicator,
+/obj/machinery/fabricator/replicator,
 /turf/simulated/floor/tiled/airless,
 /area/lost_supply_base/common)
 "cx" = (
@@ -2293,13 +2293,6 @@
 "gu" = (
 /turf/simulated/floor/asteroid,
 /area/mine/explored)
-"hb" = (
-/obj/effect/landmark/random_gen/asteroid{
-	generation_height = 100;
-	generation_width = 100
-	},
-/turf/space,
-/area/space)
 "ib" = (
 /obj/structure/hygiene/sink{
 	icon_state = "sink";
@@ -2422,7 +2415,7 @@ aa
 aa
 aa
 aa
-hb
+aa
 "}
 (2,1,1) = {"
 aa

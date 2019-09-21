@@ -704,6 +704,7 @@
 /obj/structure/cable{
 	icon_state = "6-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo/lower)
 "bw" = (
@@ -811,7 +812,6 @@
 "bG" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /obj/structure/holostool,
@@ -859,6 +859,7 @@
 /area/ship/scrap/cargo/lower)
 "bL" = (
 /obj/effect/landmark/test/safe_turf,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo/lower)
 "bM" = (
@@ -1383,6 +1384,17 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/scrap/crew/dorms2)
+"cI" = (
+/turf/simulated/floor/plating,
+/area/ship/scrap/broken2)
+"cJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating,
+/area/ship/scrap/broken2)
 "cL" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -1499,7 +1511,6 @@
 /obj/item/device/radio,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 2;
-	layer = 2.4;
 	level = 2
 	},
 /obj/item/weapon/storage/bag/trash,
@@ -1717,7 +1728,6 @@
 "dD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2193,7 +2203,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /turf/simulated/floor/plating,
@@ -2271,7 +2280,6 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8;
-	layer = 2.4;
 	level = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2323,12 +2331,15 @@
 /obj/item/weapon/tape_roll,
 /obj/structure/table/standard,
 /obj/item/device/radio/intercom{
-	pixel_y = -32
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/ship/scrap/maintenance/storage)
 "eZ" = (
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ship/scrap/maintenance/storage)
 "fb" = (
@@ -2509,7 +2520,6 @@
 /obj/structure/mopbucket,
 /obj/structure/table/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/item/device/multitool{
@@ -2568,7 +2578,7 @@
 	icon_state = "corner_white";
 	dir = 5
 	},
-/obj/machinery/autolathe,
+/obj/machinery/fabricator,
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/scrap/maintenance/techstorage)
 "rv" = (
@@ -2746,7 +2756,6 @@
 "Db" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /obj/structure/holostool,
@@ -2756,6 +2765,14 @@
 	},
 /turf/simulated/floor/lino,
 /area/ship/scrap/crew/dorms1)
+"Dh" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4;
+	level = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/ship/scrap/cargo/lower)
 "Dl" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -2880,7 +2897,6 @@
 "Lb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /obj/item/weapon/storage/briefcase,
@@ -2965,7 +2981,6 @@
 "Sb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
-	layer = 2.4;
 	level = 2
 	},
 /obj/structure/holostool,
@@ -6270,8 +6285,8 @@ ak
 av
 aH
 aT
-aU
-aU
+du
+Dh
 bv
 bL
 bV

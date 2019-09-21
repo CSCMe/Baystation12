@@ -7,8 +7,10 @@
 	var/obj/carrying
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 
-/obj/item/mech_equipment/clamp/attack()
-	return 0
+/obj/item/mech_equipment/clamp/resolve_attackby(atom/A, mob/user, click_params)
+	if(istype(A, /obj/structure/closet) && owner)
+		return 0
+	return ..()
 
 /obj/item/mech_equipment/clamp/afterattack(var/atom/target, var/mob/living/user, var/inrange, var/params)
 	. = ..()
@@ -69,6 +71,12 @@
 		return carrying.name
 	. = ..()
 
+/obj/item/mech_equipment/clamp/uninstalled()
+	if(carrying)
+		carrying.dropInto(loc)
+		carrying = null
+	. = ..()
+	
 // A lot of this is copied from floodlights.
 /obj/item/mech_equipment/light
 	name = "floodlight"
@@ -100,6 +108,11 @@
 		icon_state = "[initial(icon_state)]"
 		set_light(0, 0)
 
+/obj/item/mech_equipment/light/uninstalled()
+	on = FALSE
+	update_icon()
+	. = ..()
+	
 #define CATAPULT_SINGLE 1
 #define CATAPULT_AREA   2
 
@@ -113,6 +126,7 @@
 	var/atom/movable/locked
 	equipment_delay = 30 //Stunlocks are not ideal
 	origin_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_MAGNET = 4)
+	require_adjacent = FALSE
 
 /obj/item/mech_equipment/catapult/get_hardpoint_maptext()
 	var/string

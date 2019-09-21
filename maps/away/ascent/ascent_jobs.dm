@@ -58,9 +58,7 @@
 				return
 
 			// Rename ourselves.
-			real_name = "[new_number] [new_name]"
-			name = real_name
-			mind.name = real_name
+			fully_replace_character_name("[new_number] [new_name]")
 
 			// Rename our alates (and only our alates).
 			cutter.gyne_name = new_name
@@ -70,10 +68,10 @@
 				var/datum/job/submap/ascent/temp_ascent_job = H.mind.assigned_job
 				if(!istype(temp_ascent_job) || temp_ascent_job.owner != ascent_job.owner)
 					continue
-				H.real_name = "[rand(10000,99999)] [new_name]"
-				H.name = H.real_name
-				if(H.mind)
-					H.mind.name = H.real_name
+
+
+				var/new_alate_number = is_species_whitelisted(H, SPECIES_MANTID_GYNE) ? random_id(/datum/species/mantid, 1000, 9999) : random_id(/datum/species/mantid, 10000, 99999)
+				H.fully_replace_character_name("[new_alate_number] [new_name]")
 				to_chat(H, SPAN_NOTICE("<font size = 3>Your gyne, [real_name], has awakened, and you recall your place in the nest-lineage: <b>[H.real_name]</b>.</font>"))
 
 	verbs -= /mob/living/carbon/human/proc/gyne_rename_lineage
@@ -88,8 +86,16 @@
 	blacklisted_species = null
 	whitelisted_species = null
 	loadout_allowed = FALSE
+	is_semi_antagonist = TRUE
 	var/requires_supervisor = FALSE
 	var/set_species_on_join = SPECIES_MANTID_GYNE
+	min_skill = list(SKILL_EVA = SKILL_ADEPT,
+					SKILL_PILOT = SKILL_ADEPT,
+					SKILL_HAULING = SKILL_ADEPT,
+					SKILL_COMBAT = SKILL_ADEPT,
+					SKILL_WEAPONS = SKILL_ADEPT,
+					SKILL_SCIENCE = SKILL_ADEPT,
+					SKILL_MEDICAL = SKILL_BASIC)
 
 /datum/job/submap/ascent/is_position_available()
 	. = ..()
@@ -130,14 +136,14 @@
 		H.set_species(set_species_on_join)
 	switch(H.species.name)
 		if(SPECIES_MANTID_GYNE)
-			H.real_name = "[rand(1,99)] [cutter.gyne_name]"
+			H.real_name = "[random_id(/datum/species/mantid, 1, 99)] [cutter.gyne_name]"
 			H.verbs |= /mob/living/carbon/human/proc/gyne_rename_lineage
 		if(SPECIES_MANTID_ALATE)
-			H.real_name = "[rand(10000,99999)] [cutter.gyne_name]"
+			var/new_alate_number = is_species_whitelisted(H, SPECIES_MANTID_GYNE) ? random_id(/datum/species/mantid, 1000, 9999) : random_id(/datum/species/mantid, 10000, 99999)
+			H.real_name = "[new_alate_number] [cutter.gyne_name]"
 	H.name = H.real_name
 	if(H.mind)
 		H.mind.name = H.real_name
-		GLOB.provocateurs.add_antagonist(H.mind)
 	return H
 
 /datum/job/submap/ascent/alate
@@ -148,6 +154,11 @@
 	set_species_on_join = SPECIES_MANTID_ALATE
 	outfit_type = /decl/hierarchy/outfit/job/ascent/tech
 	requires_supervisor = "Ascent Gyne"
+	min_skill = list(SKILL_EVA = SKILL_ADEPT,
+					SKILL_HAULING = SKILL_ADEPT,
+					SKILL_COMBAT = SKILL_ADEPT,
+					SKILL_WEAPONS = SKILL_ADEPT,
+					SKILL_MEDICAL = SKILL_BASIC)	
 
 /datum/job/submap/ascent/drone
 	title = "Ascent Drone"
@@ -165,6 +176,12 @@
 	info = "You are a Monarch Serpentid Worker serving as an attendant to your Queen on this vessel. Serve her however she requires."
 	set_species_on_join = SPECIES_MONARCH_WORKER
 	outfit_type = /decl/hierarchy/outfit/job/ascent/soldier
+	min_skill = list(SKILL_EVA = SKILL_ADEPT,
+					SKILL_HAULING = SKILL_ADEPT,
+					SKILL_COMBAT = SKILL_ADEPT,
+					SKILL_WEAPONS = SKILL_ADEPT,
+					SKILL_SCIENCE = SKILL_ADEPT,
+					SKILL_MEDICAL = SKILL_BASIC)
 
 /datum/job/submap/ascent/msq
 	title = "Serpentid Queen"
@@ -172,6 +189,11 @@
 	total_positions = 2
 	info = "You are a Monarch Serpentid Queen living on an independant Ascent vessel. Assist the Gyne in her duties and tend to your Workers."
 	set_species_on_join = SPECIES_MONARCH_QUEEN
+	min_skill = list(SKILL_EVA = SKILL_ADEPT,
+					SKILL_HAULING = SKILL_ADEPT,
+					SKILL_COMBAT = SKILL_ADEPT,
+					SKILL_WEAPONS = SKILL_ADEPT,
+					SKILL_MEDICAL = SKILL_BASIC)
 */
 
 // Spawn points.

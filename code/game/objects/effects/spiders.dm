@@ -117,7 +117,6 @@
 	desc = "It never stays still for long."
 	icon_state = "guard"
 	anchored = 0
-	plane = OBJ_PLANE
 	layer = BELOW_OBJ_LAYER
 	health = 3
 	var/mob/living/simple_animal/hostile/giant_spider/greater_form
@@ -223,7 +222,7 @@
 
 	if(loc)
 		var/datum/gas_mixture/environment = loc.return_air()
-		if(environment && environment.gas["methyl_bromide"] > 0)
+		if(environment && environment.gas[GAS_METHYL_BROMIDE] > 0)
 			die()
 			return
 
@@ -306,7 +305,6 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "greenshatter"
 	anchored = 1
-	plane = ABOVE_TURF_PLANE
 	layer = BLOOD_LAYER
 
 /obj/effect/spider/cocoon

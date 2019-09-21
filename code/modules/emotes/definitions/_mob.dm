@@ -29,9 +29,9 @@
 		/decl/emote/visible/roll,
 		/decl/emote/visible/shake,
 		/decl/emote/visible/jump,
-		/decl/emote/visible/hiss,
 		/decl/emote/visible/shiver,
 		/decl/emote/visible/collapse,
+		/decl/emote/audible/hiss,
 		/decl/emote/audible,
 		/decl/emote/audible/deathgasp_alien,
 		/decl/emote/audible/whimper,
@@ -55,9 +55,9 @@
 		/decl/emote/visible/roll,
 		/decl/emote/visible/shake,
 		/decl/emote/visible/jump,
-		/decl/emote/visible/hiss,
 		/decl/emote/visible/shiver,
 		/decl/emote/visible/collapse,
+		/decl/emote/audible/hiss,
 		/decl/emote/audible,
 		/decl/emote/audible/scretch,
 		/decl/emote/audible/choke,
@@ -192,9 +192,9 @@
 
 /mob/living/silicon/robot/flying/ascent
 	default_emotes = list(
-		/decl/emote/audible/synth/ascent_purr,
-		/decl/emote/audible/synth/ascent_hiss,
-		/decl/emote/audible/synth/ascent_snarl
+		/decl/emote/audible/ascent_purr,
+		/decl/emote/audible/ascent_hiss,
+		/decl/emote/audible/ascent_snarl
 	)
 
 /mob/living/carbon/slime
