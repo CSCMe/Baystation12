@@ -1384,17 +1384,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/scrap/crew/dorms2)
-"cI" = (
-/turf/simulated/floor/plating,
-/area/ship/scrap/broken2)
-"cJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	level = 2
-	},
-/obj/structure/foamedmetal,
-/turf/simulated/floor/plating,
-/area/ship/scrap/broken2)
 "cL" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -2516,28 +2505,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/scrap/escape_star)
-"ob" = (
-/obj/structure/mopbucket,
-/obj/structure/table/rack{
-	dir = 8;
-	},
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/device/multitool{
-	pixel_x = 3
-	},
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ship/scrap/broken1)
-"pb" = (
-/obj/machinery/robotics_fabricator,
-/turf/simulated/floor/plating,
-/area/ship/scrap/broken1)
 "pr" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
