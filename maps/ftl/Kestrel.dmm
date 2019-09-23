@@ -1,110 +1,171 @@
-"a" = (/turf/space,/area/space)
-"b" = (/turf/simulated/wall/ocp_wall,/area/space)
-"c" = (/obj/machinery/door/airlock/external/bolted,/turf/simulated/floor/airless,/area/space)
-"d" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 4},/turf/simulated/wall/ocp_wall,/area/space)
-"e" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{icon_state = "intact"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/space)
-"f" = (/turf/simulated/floor/reinforced/airless,/area/space)
-"g" = (/turf/simulated/floor/tiled/monotile,/area/space)
-"h" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{icon_state = "map_vent"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/space)
-"i" = (/obj/machinery/door/airlock/external/bolted_open,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/space)
-"j" = (/turf/simulated/wall,/area/space)
-"k" = (/turf/simulated/floor/tiled/white/monotile,/area/space)
-"l" = (/turf/simulated/wall/titanium,/area/space)
-"m" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/monotile,/area/space)
-"n" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{icon_state = "map_vent_in"; dir = 4},/turf/simulated/floor/reinforced/airmix,/area/space)
-"o" = (/turf/simulated/wall/titanium,/area/ship/Kestrel/doorcontrol)
-"p" = (/turf/simulated/wall/titanium,/area/ship/Kestrel/fore)
-"q" = (/turf/simulated/wall/titanium,/area/ship/Kestrel/helm)
-"r" = (/obj/effect/wallframe_spawn/reinforced/hull,/turf/simulated/floor,/area/ship/Kestrel/helm)
-"s" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/atmospherics/binary/passive_gate/on{dir = 4; icon_state = "map_on"; target_pressure = 300},/turf/simulated/floor,/area/space)
-"t" = (/obj/machinery/computer/air_control{icon_state = "computer"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/space)
-"u" = (/turf/simulated/floor/reinforced/airmix,/area/space)
-"v" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor,/area/space)
-"w" = (/turf/simulated/wall,/area/ship/Kestrel/doorcontrol)
-"x" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/doorcontrol)
-"y" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/space)
-"z" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/fore)
-"A" = (/turf/simulated/wall,/area/ship/Kestrel/helm)
-"B" = (/obj/machinery/computer/ship/sensors,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"C" = (/obj/machinery/door/airlock/external/bolted,/turf/simulated/floor/tiled/monotile,/area/space)
-"D" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/doorcontrol)
-"E" = (/obj/structure/bed/chair/shuttle/white{icon_state = "shuttle_chair_preview"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"F" = (/turf/simulated/wall/titanium,/area/ship/Kestrel/monitoring)
-"G" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock,/turf/simulated/floor/tiled/monotile,/area/space)
-"H" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/space)
-"I" = (/obj/machinery/computer/ship/helm{icon_state = "computer"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"J" = (/turf/simulated/wall,/area/ship/Kestrel/monitoring)
-"K" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"L" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
-"M" = (/obj/machinery/computer/ship/navigation{icon_state = "computer"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"N" = (/obj/item/modular_computer/console/preset/engineering{icon_state = "console"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
-"O" = (/obj/structure/bed/chair/comfy{icon_state = "comfychair_preview"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
-"P" = (/obj/item/modular_computer/console/preset/security{icon_state = "console"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
-"Q" = (/obj/item/modular_computer/console/preset/sysadmin{icon_state = "console"; dir = 1},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
-"R" = (/obj/machinery/computer/ship/engines{icon_state = "computer"; dir = 1},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
-"S" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/doorcontrol)
-"T" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/helm)
-"U" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/monitoring)
-"V" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/monitoring)
+"aa" = (/turf/space,/area/space)
+"ab" = (/turf/simulated/wall,/area/ship/Kestrel/Nport)
+"ac" = (/turf/simulated/wall/ocp_wall/NTred,/area/ship/Kestrel/Nport)
+"ad" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 4},/turf/simulated/wall/ocp_wall,/area/ship/Kestrel/Nport)
+"ae" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{icon_state = "intact"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nport)
+"af" = (/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nport)
+"ag" = (/turf/simulated/wall/ocp_wall,/area/ship/Kestrel/Nport)
+"ah" = (/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/Nport)
+"ai" = (/turf/simulated/floor/reinforced/hydrogen/fuel,/area/ship/Kestrel/Nport)
+"aj" = (/turf/simulated/wall/NTred,/area/ship/Kestrel/engine)
+"ak" = (/turf/simulated/floor/reinforced/hydrogen,/area/ship/Kestrel/Nport)
+"al" = (/turf/simulated/floor/reinforced/oxygen,/area/ship/Kestrel/Nport)
+"am" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{icon_state = "map_vent"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nport)
+"an" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor,/area/ship/Kestrel/Nport)
+"ao" = (/turf/simulated/wall,/area/ship/Kestrel/fore)
+"ap" = (/turf/simulated/wall,/area/ship/Kestrel/port)
+"aq" = (/obj/machinery/door/airlock/external/bolted,/turf/simulated/floor/airless,/area/ship/Kestrel/port)
+"ar" = (/obj/effect/wallframe_spawn/reinforced/hull,/turf/simulated/floor,/area/ship/Kestrel/helm)
+"as" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 5},/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/Nport)
+"at" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/Nport)
+"au" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 10},/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/Nport)
+"av" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/port)
+"aw" = (/turf/simulated/wall,/area/ship/Kestrel/doorcontrol)
+"ax" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/doorcontrol)
+"ay" = (/turf/simulated/wall,/area/ship/Kestrel/atmos)
+"az" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/fore)
+"aA" = (/turf/simulated/wall,/area/ship/Kestrel/helm)
+"aB" = (/obj/machinery/computer/ship/sensors,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aC" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock/hatch/autoname/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/Nport)
+"aD" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/doorcontrol)
+"aE" = (/obj/structure/bed/chair/shuttle/white{icon_state = "shuttle_chair_preview"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aF" = (/turf/simulated/floor/reinforced/carbon_dioxide,/area/ship/Kestrel/Nport)
+"aG" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{icon_state = "map_vent_in"; dir = 4},/turf/simulated/floor/reinforced/airmix,/area/ship/Kestrel/atmos)
+"aH" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{icon_state = "intact"; dir = 4},/obj/machinery/sparker{pixel_x = -24},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nport)
+"aI" = (/obj/machinery/computer/ship/helm{icon_state = "computer"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aJ" = (/turf/simulated/wall,/area/ship/Kestrel/monitoring)
+"aK" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aL" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
+"aM" = (/obj/machinery/computer/ship/navigation{icon_state = "computer"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aN" = (/obj/item/modular_computer/console/preset/engineering{icon_state = "console"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
+"aO" = (/obj/structure/bed/chair/comfy{icon_state = "comfychair_preview"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
+"aP" = (/obj/item/modular_computer/console/preset/security{icon_state = "console"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
+"aQ" = (/obj/item/modular_computer/console/preset/sysadmin{icon_state = "console"; dir = 1},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/monitoring)
+"aR" = (/obj/machinery/computer/ship/engines{icon_state = "computer"; dir = 1},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/helm)
+"aS" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/doorcontrol)
+"aT" = (/obj/item/air_sensor,/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nport)
+"aU" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/monitoring)
+"aV" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/monitoring)
+"aW" = (/obj/item/pipe/injector,/turf/simulated/floor/airless,/area/ship/Kestrel/atmos)
+"aX" = (/turf/simulated/wall/NTred,/area/ship/Kestrel/atmos)
+"aY" = (/obj/effect/wallframe_spawn/reinforced/hull,/obj/machinery/atmospherics/pipe/simple/visible/universal,/turf/simulated/floor,/area/ship/Kestrel/atmos)
+"aZ" = (/turf/simulated/wall/NTred,/area/ship/Kestrel/fore)
+"ba" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock/autoname/command,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/helm)
+"bb" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/atmospherics/pipe/manifold/visible/blue{icon_state = "map"; dir = 1},/turf/simulated/floor,/area/ship/Kestrel/atmos)
+"bc" = (/obj/machinery/door/airlock/external/bolted_open,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/port)
+"bd" = (/turf/simulated/wall,/area/ship/Kestrel/medbay)
+"be" = (/obj/machinery/computer/air_control,/obj/machinery/atmospherics/pipe/simple/visible/blue{icon_state = "intact"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bf" = (/obj/machinery/atmospherics/portables_connector{icon_state = "map_connector"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bg" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bi" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/atmos)
+"bj" = (/obj/item/air_sensor,/turf/simulated/floor/reinforced/airmix,/area/ship/Kestrel/atmos)
+"bk" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/atmospherics/pipe/simple/visible/blue{icon_state = "intact"; dir = 5},/turf/simulated/floor,/area/ship/Kestrel/atmos)
+"bl" = (/obj/machinery/atmospherics/binary/passive_gate/on{dir = 4; icon_state = "map_on"; target_pressure = 300},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bm" = (/obj/machinery/atmospherics/pipe/simple/visible/universal{icon_state = "map_universal"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bn" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/medbay)
+"bo" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock/autoname/engineering,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/atmos)
+"bp" = (/turf/simulated/wall,/area/ship/Kestrel/engine)
+"bq" = (/turf/simulated/wall,/area/ship/Kestrel/wcrtl)
+"br" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/wcrtl)
+"bs" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/medbay)
+"bt" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/engine)
+"bu" = (/obj/machinery/computer/air_control,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/engine)
+"bv" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/engine)
+"bw" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/wcrtl)
+"bx" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/wcrtl)
+"by" = (/obj/machinery/door/airlock/external/bolted,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/engine)
+"bz" = (/obj/machinery/door/airlock/external/bolted_open,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/engine)
+"bA" = (/turf/simulated/wall,/area/ship/Kestrel/starboard)
+"bB" = (/turf/simulated/wall,/area/ship/Kestrel/shields)
+"bC" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/starboard)
+"bD" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/shields)
+"bE" = (/obj/machinery/computer/air_control{icon_state = "computer"; dir = 1},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/engine)
+"bF" = (/turf/simulated/wall,/area/ship/Kestrel/teleporter)
+"bG" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock/autoname/engineering,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/teleporter)
+"bH" = (/turf/simulated/wall,/area/ship/Kestrel/Nstarboard)
+"bI" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/shields)
+"bJ" = (/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/teleporter)
+"bK" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/teleporter)
+"bL" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"bM" = (/turf/simulated/floor/reinforced/carbon_dioxide,/area/ship/Kestrel/Nstarboard)
+"bN" = (/obj/machinery/door/airlock/external/bolted_open,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/starboard)
+"bO" = (/obj/effect/floor_decal/industrial/warning/fulltile,/obj/machinery/door/airlock/hatch/autoname/engineering,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/Nstarboard)
+"bP" = (/turf/simulated/floor/tiled/monotile,/area/ship/Kestrel/Nstarboard)
+"bQ" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor,/area/ship/Kestrel/Nstarboard)
+"bR" = (/turf/simulated/wall/ocp_wall/NTred,/area/ship/Kestrel/Nstarboard)
+"bS" = (/obj/machinery/door/airlock/external/bolted,/turf/simulated/floor/airless,/area/ship/Kestrel/starboard)
+"bT" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 4},/turf/simulated/wall/ocp_wall,/area/ship/Kestrel/Nstarboard)
+"bU" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{icon_state = "intact"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nstarboard)
+"bV" = (/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nstarboard)
+"bW" = (/turf/simulated/wall/ocp_wall,/area/ship/Kestrel/Nstarboard)
+"bX" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{icon_state = "map_vent"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nstarboard)
+"bY" = (/turf/simulated/floor/reinforced/hydrogen/fuel,/area/ship/Kestrel/Nstarboard)
+"bZ" = (/turf/simulated/floor/reinforced/oxygen,/area/ship/Kestrel/Nstarboard)
+"ca" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"cb" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"cc" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 4},/turf/simulated/floor/tiled/white/monotile,/area/ship/Kestrel/atmos)
+"cd" = (/obj/item/air_sensor,/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nstarboard)
+"ce" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{icon_state = "intact"; dir = 4},/obj/machinery/sparker{pixel_x = -24},/turf/simulated/floor/reinforced/airless,/area/ship/Kestrel/Nstarboard)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaalbbblllllllllllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaabfffbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaabfffbgggggggggllccllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbgggggggggjkkkkllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaalbbbjjjjjjjjggjkkkkjllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaalnsktjkkkkjggjjjijjjlllllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaluvkkykkkkjggjkkkkjkkkklllaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaalllljjyjjjjjmjGjjkkkkHkkkkwwooooppppqqraaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaalkkjkkkkkkjkkkkkykkkkjkkkkwxxxxwzzzzABrraaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaCkkikkkkkkjkkkkkjkkkkjkkkkSDDDDSzzzzAEIraaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaalkkjkkkkkkjkkkkkjjjjjjjjjjJJJJJJzzzzTKKqaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaCkkikkkkkkjkkkkkjkkkkjkkkkULLLLVzzzzAEMraaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaalkkjkkkkkkjkkkkkykkkkjkkkkJNOPQJzzzzARrraaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaalllljjyjjjjjyjGjjkkkkykkkkJJFFFFppppqqraaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaalkkkkykkkkjggjkkkkjkkkklllaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaalkkkkjkkkkjggjjjijjjlllllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaalbbbjjjjjjjjggjkkkkjllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbgggggggggjkkkkllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaabfffbgggggggggllccllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaabfffbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaadefhbggggggggglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaalbbblllllllllllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeafagahabaiakakabalalalabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaHamagahabaiakakabalalalabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeaTagahabanananabanananabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacabahahahahahahahahahabapaqaqapapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaWabahahasatatauanananabavavavavapapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaXayayaYababababababaCabaFaFabavavavavapapapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpayaGbbbebfbgaybgbgbgbhabaFaFabapapbcapbdbdbdbdbdawawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaybjbkblbmbgbibLcacbccabaFaFabavavavavbdbnbnbnbnawawawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpayayayayboayayaybqbqbrbqbqbqbqavavavavbsbnbnbnbnawawawawawawaoaZaZaoaAaAaraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbtbtbpbubvbtbtbtbtbqbwbwbwbwbwbxavavavavbdbnbnbnbnawaxaxaxaxawazazazazaAaBararaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabybtbtbzbtbtbtbtbtbtbqbwbwbwbwbwbqavavavavbdbnbnbnbnaSaDaDaDaDaSazazazazaAaEaIaraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbtbtbpbtbtbtbtbtbtbqbwbwbwbwbwbqbAbAbAbAbBbBbBbBbBaJaJaJaJaJaJazazazazbaaKaKaAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabybtbtbzbtbtbtbtbtbtbqbwbwbwbwbwbqbCbCbCbCbBbDbDbDbDaUaLaLaLaLaVazazazazaAaEaMaraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbtbtbpbEbvbtbtbtbtbqbwbwbwbwbwbxbCbCbCbCbBbDbDbDbDaJaNaOaPaQaJazazazazaAaRararaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpbpbFbFbFbGbFbFbFbqbqbxbqbqbqbqbCbCbCbCbIbDbDbDbDaJaJaJaJaJaJaoaZaZaoaAaAaraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpbpbFbJbJbJbJbKbJbJbJbJbHbMbMbHbCbCbCbCbBbDbDbDbDaJaJaJaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpbFbJbJbJbJbFbJbJbJbJbHbMbMbHbAbAbNbAbBbBbBbBbBaJaJaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpajbFbFbFbHbHbHbHbHbHbObHbMbMbHbCbCbCbCbAbAbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabHbPbPbPbPbPbPbQbQbQbHbCbCbCbCbAbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabHbRbRbHbPbPbPbPbPbPbPbPbPbHbAbSbSbAbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabTbUcdbWbPbHbQbQbQbHbQbQbQbHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabTcebXbWbPbHbYbYbYbHbZbZbZbHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabTbUbVbWbPbHbYbYbYbHbZbZbZbHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabHbRbRbHbHbHbHbHbHbHbHbHbHbHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

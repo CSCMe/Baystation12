@@ -3,12 +3,12 @@
 	full_name = "Faster Than Light"
 	path = "overmap_example"
 
-	station_name  = "FTV Bearcat"
-	station_short = "Bearcat"
+	station_name  = "FTL"
+	station_short = "FTL"
 
 	dock_name     = "STNDRD"
-	boss_name     = "NTHQ"
-	boss_short    = "NT"
+	boss_name     = "Corporate"
+	boss_short    = "Corp"
 	overmap_event_areas = 11
 
 	default_law_type = /datum/ai_laws/corporate
@@ -28,7 +28,7 @@
 	department_money = 0
 	salary_modifier = 0.4
 
-/datum/map/bearcat/get_map_info()
-	return "You're aboard the <b>[station_name]</b>."
+/datum/map/FTL/get_map_info()
+	return "You're one of many mercenary groups hired by corporations to scout and secure sectors they find appealing. You do not know your employer, but what you do know is simple; the better the sector is when the construction fleet arrives, the higher your pay is."
 
-//I'll do all this later, ocne I figure it out
+//I'll do all this later, once I figure it out

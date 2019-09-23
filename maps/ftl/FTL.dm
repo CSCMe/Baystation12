@@ -21,3 +21,21 @@
 	#include "../away/unishi/unishi.dm"
 
 	#endif
+
+/obj/machinery/door/airlock/hatch/autoname/command
+	stripe_color = COLOR_COMMAND_BLUE
+
+/obj/machinery/door/airlock/hatch/autoname/engineering
+	stripe_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/autoname/engineering
+	stripe_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/autoname/command
+	stripe_color = COLOR_COMMAND_BLUE
+
+/turf/simulated/wall/NTred
+	color = COLOR_NT_RED
+
+/turf/simulated/wall/ocp_wall/NTred
+	color = COLOR_NT_RED
