@@ -2272,6 +2272,17 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/forestarboard)
+"et" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/emitter/gyrotron{
+	dir = 8;
+	initial_id_tag = "aux_fusion_plant"
+	},
+/turf/simulated/floor/reinforced,
+/area/vacant/prototype/engine)
 "eu" = (
 /obj/structure/cable{
 	d1 = 32;
@@ -2949,8 +2960,7 @@
 /area/assembly/robotics/lower)
 "gh" = (
 /obj/structure/table/rack{
-	dir = 8;
-	
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/stack/material/glass{
@@ -8149,17 +8159,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/vacant/prototype/engine)
-"rk" = (
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/emitter/gyrotron{
-	dir = 8;
-	initial_id_tag = "aux_fusion_plant"
-	},
-/turf/simulated/floor/reinforced,
-/area/vacant/prototype/engine)
 "rl" = (
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
@@ -9028,7 +9027,9 @@
 /area/engineering/atmos)
 "tP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/pipedispenser,
+/obj/machinery/pipedispenser{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "tQ" = (
@@ -9036,7 +9037,9 @@
 	c_tag = "Atmospherics - North"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/pipedispenser/disposal,
+/obj/machinery/pipedispenser/disposal{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "tU" = (
@@ -16025,8 +16028,7 @@
 /area/shuttle/escape_pod10/station)
 "OQ" = (
 /obj/structure/table/rack{
-	dir = 8;
-	
+	dir = 8
 	},
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
@@ -29291,7 +29293,7 @@ mb
 Ve
 Gh
 Kg
-rk
+et
 Uh
 Kj
 Qi

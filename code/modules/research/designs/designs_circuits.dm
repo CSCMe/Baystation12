@@ -465,6 +465,19 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/atmoscontrol
 	sort_string = "JCAAF"
 
+/datum/design/circuit/pipe_dispenser
+	name = "pipe dispenser"
+	id = "pipe_dispenser"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 5)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/pipedispensor
+	sort_string = "JCAAG"
+
+/datum/design/circuit/pipe_dispenser/disposal
+	name = "disposal pipe dispenser"
+	id = "pipe_disposal"
+	build_path = /obj/item/weapon/stock_parts/circuitboard/pipedispensor/disposal
+	sort_string = "JCAAH"
+
 /datum/design/circuit/secure_airlock
 	name = "secure airlock electronics"
 	desc =  "Allows for the construction of a tamper-resistant airlock electronics."
@@ -760,3 +773,10 @@
 	req_tech = list(TECH_POWER = 2, TECH_ENGINEERING = 1)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/sublimator/sauna
 	sort_string = "XAAAC"
+
+/datum/design/circuit/vitals
+	name = "vitals monitor"
+	id = "vitals"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/vitals_monitor
+	sort_string = "XAAAD"
