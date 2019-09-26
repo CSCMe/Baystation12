@@ -1,7 +1,7 @@
 /datum/map/FTL
 	name = "FTL"
 	full_name = "Faster Than Light"
-	path = "overmap_example"
+	path = "FTL"
 
 	station_name  = "FTL"
 	station_short = "FTL"
@@ -26,9 +26,7 @@
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
 	department_money = 0
-	salary_modifier = 0.4
+	salary_modifier = 0.6
 
 /datum/map/FTL/get_map_info()
 	return "You're one of many mercenary groups hired by corporations to scout and secure sectors they find appealing. You do not know your employer, but what you do know is simple; the better the sector is when the construction fleet arrives, the higher your pay is."
-
-//I'll do all this later, once I figure it out

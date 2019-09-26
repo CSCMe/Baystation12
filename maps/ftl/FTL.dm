@@ -3,6 +3,7 @@
 
     #include "FTL_areas.dm"
 	#include "Kestrel.dmm"
+	#include "FTL_overmap.dm"
 
 	#define using_map_DATUM /datum/map/FTL
 
@@ -34,8 +35,14 @@
 /obj/machinery/door/airlock/autoname/command
 	stripe_color = COLOR_COMMAND_BLUE
 
+/obj/machinery/door/airlock/autoname/civilian
+	stripe_color = COLOR_CIVIE_GREEN
+
+/obj/machinery/door/airlock/autoname/weapons
+	stripe_color = COLOR_RED
+
 /turf/simulated/wall/NTred
 	color = COLOR_NT_RED
 
-/turf/simulated/wall/ocp_wall/NTred
+/turf/simulated/wall/r_wall/NTred
 	color = COLOR_NT_RED

@@ -1,3 +1,5 @@
+/datum/unit_test/station_wires_shall_be_connected
+
 /datum/map/FTL
 	// Unit test exemptions
 

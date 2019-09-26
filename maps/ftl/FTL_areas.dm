@@ -3,7 +3,7 @@
 	name = "\improper Kestrel Helm"
 	icon_state = "shuttlered"
 
-/area/ship/Kestrel/fore
+/area/ship/Kestrel/comms
 	name = "\improper Kestrel Telecommunications"
 	icon_state = "tcomsatcham"
 
@@ -54,3 +54,9 @@
 /area/ship/Kestrel/engine
 	name = "\improper Kestrel Enginering"
 	icon_state = "engineering"
+
+/area/ship/Kestrel/shall
+	name = "\improper Starboard Hallway"
+
+/area/ship/Kestrel/phall
+	name = "\improper Port Hallway"
