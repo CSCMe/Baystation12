@@ -18,8 +18,8 @@
 
 	evac_controller_type = /datum/evacuation_controller/starship
 
-	allowed_spawns = list("Cryogenic Storage")
-	default_spawn = "Cryogenic Storage"
+	allowed_spawns = list("Kestrel-Teleporter")
+	default_spawn = "Kestrel-Teleporter"
 	use_overmap = 1
 	num_exoplanets = 1
 	away_site_budget = 4

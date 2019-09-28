@@ -1,5 +1,5 @@
 #if !defined(using_map_DATUM)
-    #include "FTL_unit_testing.dm"
+//    #include "FTL_unit_testing.dm"
 
     #include "FTL_areas.dm"
 	#include "Kestrel.dmm"
@@ -7,7 +7,11 @@
 
 	#define using_map_DATUM /datum/map/FTL
 
+    #include "../away/empty.dmm"
+	#include "../away/ascent/ascent.dm"
+	#include "../away/mining/mining.dm"
 	#include "../away/derelict/derelict.dm"
+	#include "../away/bearcat/bearcat.dm"
 	#include "../away/lost_supply_base/lost_supply_base.dm"
 	#include "../away/smugglers/smugglers.dm"
 	#include "../away/magshield/magshield.dm"
@@ -20,6 +24,7 @@
 	#include "../away/errant_pisces/errant_pisces.dm"
 	#include "../away/lar_maria/lar_maria.dm"
 	#include "../away/unishi/unishi.dm"
+	#include "../away/voxship/voxship.dm"
 
 	#endif
 
