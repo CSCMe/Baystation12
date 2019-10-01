@@ -4,6 +4,9 @@
     #include "FTL_areas.dm"
 	#include "Kestrel.dmm"
 	#include "FTL_overmap.dm"
+	#include "FTL_unit_testing.dm"
+	#include "FTL_shuttles.dm"
+	#include "FTL_transitlevel.dmm"
 
 	#define using_map_DATUM /datum/map/FTL
 

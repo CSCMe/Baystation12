@@ -22,7 +22,7 @@
 	default_spawn = "Kestrel-Teleporter"
 	use_overmap = 1
 	num_exoplanets = 1
-	away_site_budget = 4
+	away_site_budget = 3
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
 	department_money = 0

@@ -3140,7 +3140,6 @@
 #include "maps\example\example_define.dm"
 #include "maps\ftl\FTL.dm"
 #include "maps\ftl\FTL_define.dm"
-#include "maps\ftl\FTL_unit_testing.dm"
 #include "maps\random_ruins\exoplanet_ruins\exoplanet_ruins.dm"
 #include "maps\random_ruins\exoplanet_ruins\crashed_pod\crashed_pod.dm"
 #include "maps\random_ruins\exoplanet_ruins\datacapsule\datacapsule.dm"

@@ -16,8 +16,8 @@
 	icon_state = "security"
 
 /area/ship/Kestrel/shields
-	name = "\improper Kestrel Shieldbay"
-	icon_state = "engineering"
+	name = "\improper Kestrel Mess Hall"
+	icon_state = "crew_quarters"
 
 /area/ship/Kestrel/medbay
 	name = "\improper Kestrel Medbay"
@@ -58,5 +58,11 @@
 /area/ship/Kestrel/shall
 	name = "\improper Starboard Hallway"
 
-/area/ship/Kestrel/phall
+/area/ship/Kestrel/phall/
 	name = "\improper Port Hallway"
+
+/area/voyager/start
+	name = "\improper Voyager"
+	icon_state = "shuttle2"
+	requires_power = 1
+	dynamic_lighting = 1
