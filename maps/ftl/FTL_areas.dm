@@ -1,7 +1,11 @@
 //Kestrel rooms
+/area/ship/kestrel
+	req_access = list(access_kestrel)
+
 /area/ship/Kestrel/helm
 	name = "\improper Kestrel Helm"
 	icon_state = "shuttlered"
+	req_access = list(access_kestrelh)
 
 /area/ship/Kestrel/comms
 	name = "\improper Kestrel Telecommunications"
@@ -61,8 +65,10 @@
 /area/ship/Kestrel/phall/
 	name = "\improper Port Hallway"
 
+//voyager
 /area/voyager/start
 	name = "\improper Voyager"
 	icon_state = "shuttle2"
 	requires_power = 1
 	dynamic_lighting = 1
+	req_access = list(access_voyager)
