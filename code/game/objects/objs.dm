@@ -159,10 +159,10 @@
 	if(obj_flags & OBJ_FLAG_ROTATABLE)
 		rotate(user)
 	..()
-	
+
 /obj/examine(mob/user)
 	. = ..()
-	if(. && (obj_flags & OBJ_FLAG_ROTATABLE))
+	if((obj_flags & OBJ_FLAG_ROTATABLE))
 		to_chat(user, "<span class='subtle'>Can be rotated with alt-click.</span>")
 
 /obj/proc/rotate(mob/user)
@@ -172,7 +172,7 @@
 
 	if(anchored)
 		to_chat(user, SPAN_NOTICE("\The [src] is secured to the floor!"))
-		return 
+		return
 
 	set_dir(turn(dir, 90))
 	update_icon() 
