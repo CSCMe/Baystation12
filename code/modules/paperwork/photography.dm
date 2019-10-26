@@ -68,7 +68,7 @@ var/global/photo_count = 0
 	. = TRUE
 	if(!img)
 		return
-	if(in_range(user, src))
+	if(distance <= 1)
 		show(user)
 		to_chat(user, desc)
 	else

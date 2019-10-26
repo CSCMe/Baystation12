@@ -98,13 +98,13 @@ else if(##equipment_var) {\
 	QDEL_NULL(helmet)
 	QDEL_NULL(tank)
 
-/obj/item/clothing/suit/space/void/examine(user)
+/obj/item/clothing/suit/space/void/examine(user,distance)
 	. = ..()
 	var/list/part_list = new
 	for(var/obj/item/I in list(helmet,boots,tank))
 		part_list += "\a [I]"
 	to_chat(user, "\The [src] has [english_list(part_list)] installed.")
-	if(tank && in_range(src,user))
+	if(tank && distance <= 1)
 		to_chat(user, "<span class='notice'>The wrist-mounted pressure gauge reads [max(round(tank.air_contents.return_pressure()),0)] kPa remaining in \the [tank].</span>")
 
 /obj/item/clothing/suit/space/void/refit_for_species(var/target_species)
@@ -226,6 +226,7 @@ else if(##equipment_var) {\
 	H.drop_from_inventory(tank, src)
 	H.put_in_hands(tank)
 	src.tank = null
+	playsound(loc, 'sound/effects/spray3.ogg', 50)
 
 /obj/item/clothing/suit/space/void/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -243,6 +244,7 @@ else if(##equipment_var) {\
 			var/choice = input("What component would you like to remove?") as null|anything in list(helmet,boots,tank)
 			if(!choice) return
 
+			playsound(loc, 'sound/items/Screwdriver.ogg', 50)
 			if(choice == tank)	//No, a switch doesn't work here. Sorry. ~Techhead
 				to_chat(user, "You pop \the [tank] out of \the [src]'s storage compartment.")
 				user.put_in_hands(tank)

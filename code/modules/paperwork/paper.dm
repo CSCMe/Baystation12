@@ -74,7 +74,7 @@
 	. = ..()
 	if(name != "sheet of paper")
 		to_chat(user, "It's titled '[name]'.")
-	if(distance <= 1 || isghost(user))
+	if(distance <= 1)
 		show_content(usr)
 	else
 		to_chat(user, "<span class='notice'>You have to go closer if you want to read it.</span>")
