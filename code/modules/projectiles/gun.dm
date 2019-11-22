@@ -317,6 +317,13 @@
 		if(curloc)
 			curloc.hotspot_expose(700, 5)
 
+	if(istype(user,/mob/living/carbon/human) && user.is_cloaked()) //shooting will disable a rig cloaking device
+		var/mob/living/carbon/human/H = user
+		if(istype(H.back,/obj/item/weapon/rig))
+			var/obj/item/weapon/rig/R = H.back
+			for(var/obj/item/rig_module/stealth_field/S in R.installed_modules)
+				S.deactivate()
+
 	update_icon()
 
 
@@ -353,7 +360,7 @@
 
 	stood_still = max(0,round((world.time - stood_still)/10) - 1)
 	if(stood_still)
-		acc_mod += min(max(2, accuracy), stood_still)
+		acc_mod += min(max(3, accuracy), stood_still)
 	else
 		acc_mod -= w_class - ITEM_SIZE_NORMAL
 		acc_mod -= bulk

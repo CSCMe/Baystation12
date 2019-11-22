@@ -95,7 +95,7 @@
 	if(islist(armor))
 		for(var/type in armor)
 			if(armor[type]) // Don't set it if it gives no armor anyway, which is many items.
-				set_extension(src, /datum/extension/armor, /datum/extension/armor, armor)
+				set_extension(src, /datum/extension/armor, armor)
 				break
 
 /obj/item/Destroy()
@@ -218,7 +218,9 @@
 		var/obj/item/weapon/storage/S = loc
 		S.remove_from_storage(src)
 
-	throwing = 0
+	if(!QDELETED(throwing))
+		throwing.finalize(hit=TRUE)
+
 	if (loc == user)
 		if(!user.unEquip(src))
 			return
