@@ -27,3 +27,15 @@
 
 //In case multiple shuttles can dock at a location,
 //subtypes can be used to hold the shuttle-specific data
+
+/obj/effect/shuttle_landmark/kestrel/port
+	name = "Kestrel port fore"
+	landmark_tag = "nav_kestrel_fore_port"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/kestrel/starboard
+	name = "Kestrel starboard fore"
+	landmark_tag = "nav_kestrel_fore_starboard"
+	base_area = /area/space
+	base_turf = /turf/space

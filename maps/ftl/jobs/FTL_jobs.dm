@@ -3,8 +3,8 @@
 
 /datum/map/FTL
 	species_to_job_whitelist = list(
-		/datum/species/adherent = list(),
-		/datum/species/nabber = list(),
+		/datum/species/adherent = list(/datum/job/crewman, /datum/job/researcher, /datum/job/pilot, /datum/job/doctor, /datum/job/engineer),
+		/datum/species/nabber = list(/datum/job/crewman),
 		/datum/species/vox = list(/datum/job/ai, /datum/job/cyborg),
 		/datum/species/human/mule = list(/datum/job/ai, /datum/job/cyborg)
 	)

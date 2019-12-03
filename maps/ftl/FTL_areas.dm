@@ -5,7 +5,7 @@
 /area/ship/Kestrel/helm
 	name = "\improper Kestrel Helm"
 	icon_state = "shuttlered"
-	req_access = list(access_kestrelh)
+	req_access = list(access_bridge)
 
 /area/ship/Kestrel/comms
 	name = "\improper Kestrel Telecommunications"
@@ -16,7 +16,7 @@
 	icon_state = "crew_quarters"
 
 /area/ship/Kestrel/doorcontrol
-	name = "\improper Kestrel Door Control"
+	name = "\improper Kestrel Cryogenics"
 	icon_state = "security"
 
 /area/ship/Kestrel/shields
@@ -36,7 +36,7 @@
 	icon_state = "hallF"
 
 /area/ship/Kestrel/wcrtl
-	name = "\improper Kestrel Weapons Control"
+	name = "\improper Kestrel Point Defense Control"
 	icon_state = "disperser"
 
 /area/ship/Kestrel/Nstarboard
@@ -62,7 +62,7 @@
 /area/ship/Kestrel/shall
 	name = "\improper Starboard Hallway"
 
-/area/ship/Kestrel/phall/
+/area/ship/Kestrel/phall
 	name = "\improper Port Hallway"
 
 //voyager

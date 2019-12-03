@@ -43,6 +43,8 @@
 
 	#endif
 
+//all the overrides and new stuff
+
 /obj/machinery/door/airlock/hatch/autoname/command
 	stripe_color = COLOR_COMMAND_BLUE
 
@@ -70,22 +72,32 @@
 /obj/item/device/radio/headset/contractor/alt
 	name = "contractor headset"
 	desc = "A headset often used by contractors on ships where having a full communications system is simply too expensive."
+	item_state = "cargo_headset" //not alt headset sprite because they look bad on other species
 	icon_state = "cargo_headset"
-	item_state = "headset"
+	max_keys = 3
 
 /obj/item/weapon/storage/belt/utility/full/FTL/New()
 	..()
-	new /obj/item/weapon/screwdriver(src)
-	new /obj/item/weapon/wrench(src)
-	new /obj/item/weapon/weldingtool(src)
-	new /obj/item/weapon/crowbar(src)
-	new /obj/item/weapon/wirecutters(src)
-	new /obj/item/stack/cable_coil/random(src, 30)
-	new /obj/item/device/multitool
+	new /obj/item/device/multitool(src)
 	update_icon()
 
-/obj/item/clothing/under/hazard/FTL
-	accessories = list(/obj/item/clothing/accessory/storage/brown_vest)
 
-/obj/item/weapon/storage/belt/holster/security/tactical/FTL
-	contents = list(/obj/item/weapon/melee/baton/loaded, /obj/item/weapon/gun/energy/gun/small/secure, /obj/item/device/flashlight/maglight, /obj/item/device/flash, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/grenade/flashbang, /obj/item/clothing/glasses/sunglasses/sechud/goggles)
+/obj/item/weapon/storage/belt/holster/security/FTL
+	name = "combat belt"
+	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
+	icon_state = "swatbelt"
+	item_state = "swatbelt"
+	storage_slots = 10
+
+/obj/item/weapon/storage/belt/holster/security/FTL/New()
+	..()
+	new /obj/item/weapon/melee/baton/loaded(src)
+	new /obj/item/weapon/gun/energy/gun/small/secure(src)
+	new /obj/item/device/flashlight/maglight(src)
+	new /obj/item/device/flash(src)
+	new /obj/item/weapon/reagent_containers/spray/pepper(src)
+	new /obj/item/weapon/grenade/flashbang(src)
+	update_icon()
+
+/obj/machinery/suit_cycler/mining/FTL
+	req_access = list()

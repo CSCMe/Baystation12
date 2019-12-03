@@ -3,12 +3,16 @@
 	title = "Fleet Commander"
 	supervisors = "money"
 	department = "Command"
+	total_positions = 1
+	spawn_positions = 1
 	department_flag = COM
+	selection_color = "#2f2f7f"
 	minimal_player_age = 1
 	economic_power = 5
 	alt_titles = list()
 	ideal_character_age = 40
 	outfit_type = /decl/hierarchy/outfit/job/FTL/Commander
+	access = list(access_kestrel, access_voyager, access_engine, access_bridge, access_security, access_medical, access_change_ids, access_engine_equip, access_brig)
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -27,7 +31,7 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-/datum/job/captain/get_description_blurb()
+/datum/job/commander/get_description_blurb()
 	return "You are the Fleet Commander. You are the law. You are in charge of all the contractors in this small fleet of yours, and now you just have to make sure they do their job, while also ensuring a pristine sector is ready for wahtever your employer wants to do with it."
 
 /datum/job/captain/post_equip_rank(var/mob/person, var/alt_title)
@@ -41,6 +45,9 @@
 	supervisors = "the Fleet Commander"
 	department = "Command"
 	department_flag = COM
+	selection_color = "#2f2f7f"
+	total_positions = 1
+	spawn_positions = 1
 	minimal_player_age = 0
 	economic_power = 4
 	alt_titles = list()
@@ -57,15 +64,14 @@
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
-
-	access = list(access_kestrel, access_kestrelr, access_kestrelh, access_voyager)
+	access = list(access_kestrel, access_voyager, access_engine, access_bridge, access_security, access_medical, access_engine_equip)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-/datum/job/captain/get_description_blurb()
+/datum/job/assistant_commander/get_description_blurb()
 	return "You are the Assistant Commander. Your job is to help the Commander with whatever you are able to, and to make sure the crew stays on your side."
 
 //engineer
@@ -101,7 +107,7 @@
 	                    SKILL_ENGINES      = SKILL_MAX)
 	skill_points = 25
 
-	access = list(access_kestrel, access_kestrelr, access_voyager)
+	access = list(access_kestrel, access_engine, access_voyager, access_engine_equip)
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/supermatter_monitor,
@@ -142,7 +148,7 @@
 	                    SKILL_CHEMISTRY   = SKILL_MAX,
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 
-	access = list(access_kestrel, access_voyager)
+	access = list(access_kestrel, access_voyager, access_medical)
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
@@ -178,7 +184,7 @@
 	skill_points = 25
 
 
-	access = list(access_kestrel, access_kestrelh, access_voyager)
+	access = list(access_kestrel, access_bridge, access_voyager)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/suit_sensors,
@@ -201,6 +207,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the Assistant Commander"
+	selection_color = "#8b0000"
 	economic_power = 2
 	minimal_player_age = 0
 	skill_points = 25
@@ -223,7 +230,7 @@
 	                    SKILL_WEAPONS     = SKILL_MAX,
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
-	access = list(access_kestrel, access_voyager)
+	access = list(access_kestrel, access_voyager, access_security)
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
@@ -257,7 +264,7 @@
 	                    SKILL_DEVICES     = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
-	access = list(access_kestrel, access_voyager)
+	access = list(access_kestrel, access_voyager, access_research)
 
 /datum/job/researcher/get_description_blurb()
 	return "You are the Researcher, specialized in operating the analyzer and exploring strange new worlds. You are subordinate to the Assistant Commander and the Fleet commander and are expected to follow them."
@@ -265,11 +272,11 @@
 //crewman
 /datum/job/crewman
 	title = "Crewman"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = -1
+	spawn_positions = -1
 	supervisors = "Everyone"
 	economic_power = 1
-	alt_titles = list("Junior Engineer", "Junior Researcher", "Junior Physician", "Janitor")
+	alt_titles = list("Junior Engineer", "Junior Researcher", "Junior Physician")
 	ideal_character_age = 30
 	minimal_player_age = 0
 	outfit_type = /decl/hierarchy/outfit/job/FTL/Crewman
